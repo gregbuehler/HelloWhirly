@@ -44,40 +44,67 @@
 
 namespace WhirlyKit
 {
-    
+
+SceneManager::SceneManager()
+: scene(NULL), renderer(NULL)
+{
+}
+
+void SceneManager::setRenderer(SceneRenderer *inRenderer)
+{
+//    std::lock_guard<std::mutex> guardLock(lock);
+    renderer = inRenderer;
+}
+
+void SceneManager::setScene(Scene *inScene)
+{
+//    std::lock_guard<std::mutex> guardLock(lock);
+    scene = inScene;
+}
+
+Scene *SceneManager::getScene()
+{
+    return scene;
+}
+
+SceneRenderer *SceneManager::getSceneRenderer()
+{
+    return renderer;
+}
+
 Scene::Scene(CoordSystemDisplayAdapter *adapter)
-    : fontTextureManager(NULL), setupInfo(NULL), currentTime(0.0)
+    : setupInfo(nullptr)
+    , currentTime(0.0)
+    , coordAdapter(adapter)
 {
     SetupDrawableStrings();
     
-    coordAdapter = adapter;
-    
     // Selection manager is used for object selection from any thread
-    addManager(kWKSelectionManager,new SelectionManager(this));
+    addManager(kWKSelectionManager,std::make_shared<SelectionManager>(this));
     // Intersection handling
-    addManager(kWKIntersectionManager, new IntersectionManager(this));
+    addManager(kWKIntersectionManager, std::make_shared<IntersectionManager>(this));
     // Layout manager handles text and icon layout
-    addManager(kWKLayoutManager, new LayoutManager());
+    addManager(kWKLayoutManager, std::make_shared<LayoutManager>());
     // Shape manager handles circles, spheres and such
-    addManager(kWKShapeManager, new ShapeManager());
+    addManager(kWKShapeManager, std::make_shared<ShapeManager>());
     // Marker manager handles 2D and 3D markers
-    addManager(kWKMarkerManager, new MarkerManager());
+    addManager(kWKMarkerManager, std::make_shared<MarkerManager>());
     // Label manager handes 2D and 3D labels
-    addManager(kWKLabelManager, new LabelManager());
+    addManager(kWKLabelManager, std::make_shared<LabelManager>());
     // Vector manager handes vector features
-    addManager(kWKVectorManager, new VectorManager());
+    addManager(kWKVectorManager, std::make_shared<VectorManager>());
     // Chunk manager handles geographic chunks that cover a large chunk of the globe
-    addManager(kWKSphericalChunkManager, new SphericalChunkManager());
+    addManager(kWKSphericalChunkManager, std::make_shared<SphericalChunkManager>());
     // Loft manager handles lofted polygon geometry
-    addManager(kWKLoftedPolyManager, new LoftManager());
+    addManager(kWKLoftedPolyManager, std::make_shared<LoftManager>());
     // Particle system manager
-    addManager(kWKParticleSystemManager, new ParticleSystemManager());
+    addManager(kWKParticleSystemManager, std::make_shared<ParticleSystemManager>());
     // 3D billboards
-    addManager(kWKBillboardManager, new BillboardManager());
+    addManager(kWKBillboardManager, std::make_shared<BillboardManager>());
     // Widened vectors
-    addManager(kWKWideVectorManager, new WideVectorManager());
+    addManager(kWKWideVectorManager, std::make_shared<WideVectorManager>());
     // Raw Geometry
-    addManager(kWKGeometryManager, new GeometryManager());
+    addManager(kWKGeometryManager, std::make_shared<GeometryManager>());
     // Components (groups of things)
     addManager(kWKComponentManager, MakeComponentManager());
     
@@ -94,9 +121,6 @@ Scene::~Scene()
     
     textures.clear();
     
-    for (std::map<std::string,SceneManager *>::iterator it = managers.begin();
-         it != managers.end(); ++it)
-        delete it->second;
     managers.clear();
     
     auto theChangeRequests = changeRequests;
@@ -163,11 +187,8 @@ DrawableRef Scene::getDrawable(SimpleIdentity drawId)
 {
     std::lock_guard<std::mutex> guardLock(drawablesLock);
     
-    auto it = drawables.find(drawId);
-    if (it != drawables.end())
-        return it->second;
-    
-    return DrawableRef();
+    const auto it = drawables.find(drawId);
+    return (it != drawables.end()) ? it->second : DrawableRef();
 }
     
 void Scene::addLocalMbr(const Mbr &localMbr)
@@ -178,51 +199,48 @@ void Scene::addLocalMbr(const Mbr &localMbr)
     // Note: This will only get bigger, never smaller
     if (localMbr.ll().x() < ll.x() && localMbr.ur().x() > ll.x())
     {
-        double dx1 = ll.x() - localMbr.ll().x();
-        double dx2 = localMbr.ur().x() - ll.x();
-        double dx = std::max(dx1,dx2);
-        overlapMargin = std::max(overlapMargin,dx);
+        const double dx1 = ll.x() - localMbr.ll().x();
+        const double dx2 = localMbr.ur().x() - ll.x();
+        overlapMargin = std::max(overlapMargin, std::max(dx1, dx2));
     }
 }
-    
+
 void Scene::setRenderer(SceneRenderer *renderer)
 {
     setupInfo = renderer->getRenderSetupInfo();
     
     std::lock_guard<std::mutex> guardLock(managerLock);
-    
-    for (std::map<std::string,SceneManager *>::iterator it = managers.begin();
-         it != managers.end(); ++it)
-        it->second->setRenderer(renderer);
+
+    for (const auto &kvp : managers)
+    {
+        kvp.second->setRenderer(renderer);
+    }
 }
     
-SceneManager *Scene::getManager(const char *name)
+SceneManagerRef Scene::getManager(const std::string &name)
 {
     std::lock_guard<std::mutex> guardLock(managerLock);
-
     return getManagerNoLock(name);
 }
     
-SceneManager *Scene::getManagerNoLock(const char *name)
+SceneManagerRef Scene::getManagerNoLock(const std::string &name)
 {
-    SceneManager *ret = NULL;
-
-    std::map<std::string,SceneManager *>::iterator it = managers.find((std::string)name);
-    if (it != managers.end())
-        ret = it->second;
-
-    return ret;
+    const auto it = managers.find(name);
+    return (it != managers.end()) ? it->second : SceneManagerRef();
 }
 
-void Scene::addManager(const char *name,SceneManager *manager)
+void Scene::addManager(const std::string &name,const SceneManagerRef &manager)
 {
     std::lock_guard<std::mutex> guardLock(managerLock);
 
     // If there's one here, we'll clear it out first
-    std::map<std::string,SceneManager *>::iterator it = managers.find((std::string)name);
-    if (it != managers.end())
-        managers.erase(it);
-    managers[(std::string)name] = manager;
+    const auto result = managers.insert(std::make_pair(name, manager));
+    if (!result.second)
+    {
+        // Entry was already present, replace it.
+        // Previous manager reference is released, possibly destroying it.
+        result.first->second = manager;
+    }
     manager->setScene(this);
 }
 
@@ -231,7 +249,7 @@ void Scene::addActiveModel(ActiveModelRef activeModel)
     activeModels.push_back(activeModel);
     activeModel->startWithScene(this);
 }
-    
+
 void Scene::removeActiveModel(ActiveModelRef activeModel)
 {
     int which = 0;
@@ -247,19 +265,15 @@ void Scene::removeActiveModel(ActiveModelRef activeModel)
         activeModel->teardown();
     }
 }
-    
+
 TextureBaseRef Scene::getTexture(SimpleIdentity texId)
 {
     std::lock_guard<std::mutex> guardLock(textureLock);
     
-    TextureBaseRef retTex;
-    auto it = textures.find(texId);
-    if (it != textures.end())
-        retTex = it->second;
-    
-    return retTex;
+    const auto it = textures.find(texId);
+    return (it != textures.end()) ? it->second : TextureBaseRef();
 }
-    
+
 const std::vector<Drawable *> Scene::getDrawables()
 {
     std::vector<Drawable *> retDraws;
@@ -280,20 +294,16 @@ void Scene::setCurrentTime(TimeInterval newTime)
 void Scene::markProgramsUnchanged()
 {
     std::lock_guard<std::mutex> guardLock(programLock);
-    
+
     for (auto it: programs) {
         auto prog = it.second;
-        if (prog->changed)
-            prog->changed = false;
+        prog->changed = false;
     }
 }
 
 TimeInterval Scene::getCurrentTime()
 {
-    if (currentTime == 0.0)
-        return TimeGetCurrent();
-    
-    return currentTime;
+    return (currentTime == 0.0) ? TimeGetCurrent() : currentTime;
 }
 
 TimeInterval Scene::getBaseTime()
@@ -484,7 +494,7 @@ void Scene::dumpStats()
     wkLogLevel(Verbose,"Scene: %ld sub textures",subTextureMap.size());
 }
     
-void Scene::setFontTextureManager(FontTextureManagerRef newManager)
+void Scene::setFontTextureManager(const FontTextureManagerRef &newManager)
 {
     fontTextureManager = newManager;
 }

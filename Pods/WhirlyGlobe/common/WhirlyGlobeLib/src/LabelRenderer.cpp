@@ -61,7 +61,7 @@ lineHeight(that.lineHeight), fontPointSize(that.fontPointSize)
 }
 
 LabelInfo::LabelInfo(const Dictionary &dict, bool screenObject)
-: screenObject(screenObject), fontPointSize(16.0)
+: BaseInfo(dict), screenObject(screenObject), fontPointSize(16.0)
 {
     hasTextColor = dict.hasField(MaplyTextColor);
     textColor = dict.getColor(MaplyTextColor, RGBAColor(255,255,255,255));
@@ -106,7 +106,7 @@ LabelSceneRep::LabelSceneRep()
 // Don't want to give them their own separate drawable, obviously
 typedef std::map<SimpleIdentity,BasicDrawable *> IconDrawables;
 
-LabelRenderer::LabelRenderer(Scene *scene,FontTextureManager *fontTexManager,const LabelInfo *labelInfo)
+LabelRenderer::LabelRenderer(Scene *scene,FontTextureManagerRef &fontTexManager,const LabelInfo *labelInfo)
     : useAttributedString(true), scene(scene), fontTexManager(fontTexManager), labelInfo(labelInfo),
     textureAtlasSize(2048), labelRep(NULL)
 {
@@ -356,10 +356,14 @@ void LabelRenderer::render(PlatformThreadInfo *threadInfo,std::vector<SingleLabe
                         wholeMbr.addPoint(iconGeom.coords[ig]);
                 const Point2f ll = wholeMbr.ll();
                 const Point2f ur = wholeMbr.ur();
-                select2d.pts[0] = Point2f(ll.x()+label->screenOffset.x(),ll.y()+-label->screenOffset.y());
-                select2d.pts[1] = Point2f(ll.x()+label->screenOffset.x(),ur.y()+-label->screenOffset.y());
-                select2d.pts[2] = Point2f(ur.x()+label->screenOffset.x(),ur.y()+-label->screenOffset.y());
-                select2d.pts[3] = Point2f(ur.x()+label->screenOffset.x(),ll.y()+-label->screenOffset.y());
+                double flip = 1.0;
+#ifdef __ANDROID__
+                flip = -1.0;
+#endif
+                select2d.pts[0] = Point2f(ll.x()+label->screenOffset.x(),ll.y()+-flip*label->screenOffset.y());
+                select2d.pts[1] = Point2f(ll.x()+label->screenOffset.x(),ur.y()+-flip*label->screenOffset.y());
+                select2d.pts[2] = Point2f(ur.x()+label->screenOffset.x(),ur.y()+-flip*label->screenOffset.y());
+                select2d.pts[3] = Point2f(ur.x()+label->screenOffset.x(),ll.y()+-flip*label->screenOffset.y());
                 
                 select2d.selectID = label->selectID;
                 select2d.minVis = labelInfo->minVis;

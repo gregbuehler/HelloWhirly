@@ -13,6 +13,7 @@
 #import "GlobeTapMessage.h"
 #import "MaplyComponent.h"
 #import "MaplySharedAttributes.h"
+#import "WhirlyGlobe-Maply-Umbrella.h"
 #import "WhirlyGlobeComponent.h"
 #import "MapboxVectorInterpreter.h"
 #import "MapboxVectorTiles.h"

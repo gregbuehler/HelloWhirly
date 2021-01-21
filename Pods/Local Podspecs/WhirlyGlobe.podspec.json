@@ -17,9 +17,9 @@
     "git": "https://github.com/mousebird/WhirlyGlobe.git",
     "branch": "develop"
   },
-  "compiler_flags": "-D__USE_SDL_GLES__ -D__IPHONEOS__ -DSQLITE_OPEN_READONLY -DHAVE_PTHREAD=1 -DUNORDERED=1 -DLASZIPDLL_EXPORTS=1",
+  "compiler_flags": "-D__USE_SDL_GLES__ -D__IPHONEOS__ -DSQLITE_OPEN_READONLY -DHAVE_PTHREAD=1 -DUNORDERED=1",
   "xcconfig": {
-    "HEADER_SEARCH_PATHS": " \"$(PODS_ROOT)/WhirlyGlobe/common/local_libs/eigen/\" \"$(PODS_ROOT)/KissXML/KissXML/\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/nanopb/\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/clipper\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/lodepng\" \"$(SDKROOT)/usr/include/libxml2\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/glues/include/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/vector_tiles/\" "
+    "HEADER_SEARCH_PATHS": " \"$(SDKROOT)/usr/include/libxml2\" \"$(PODS_ROOT)/KissXML/KissXML/\" \"$(PODS_ROOT)/WhirlyGlobe/common/local_libs/eigen/\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/nanopb/\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/clipper\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/lodepng\" \"${PODS_ROOT}/WhirlyGlobe/common/local_libs/glues/include/\" \"$(PODS_ROOT)/WhirlyGlobe/common/local_libs/GeographicLib/include/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/private/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/\" \"$(PODS_ROOT)/WhirlyGlobe/ios/library/WhirlyGlobe-MaplyComponent/include/vector_tiles/\" "
   },
   "default_subspecs": "MaplyComponent",
   "subspecs": [
@@ -30,21 +30,22 @@
         "common/local_libs/clipper/cpp/*.{cpp,hpp}",
         "common/local_libs/shapefile/**/*.{c,h}",
         "common/local_libs/lodepng/*.{cpp,h}",
-        "common/local_libs/nanopb/*.{c,h}"
+        "common/local_libs/nanopb/*.{c,h}",
+        "common/local_libs/GeographicLib/src/*.cpp"
       ],
       "preserve_paths": [
-        "common/local_libs/laszip/include/laszip/*.h",
-        "common/local_libs/laszip/src/*.hpp",
         "common/local_libs/eigen/Eigen/*",
         "common/local_libs/eigen/Eigen/**/*.h",
         "common/local_libs/lodepng/*.h",
-        "common/local_libs/nanopb/*.h"
+        "common/local_libs/nanopb/*.h",
+        "common/local_libs/GeographicLib/include/GeographicLib/*.{h,hpp}"
       ],
       "private_header_files": [
         "common/local_libs/aaplus/**/*.h",
         "common/local_libs/clipper/cpp/*.hpp",
         "common/local_libs/shapefile/**/*.h",
-        "common/local_libs/nanopb/*.h"
+        "common/local_libs/nanopb/*.h",
+        "common/local_libs/GeographicLib/include/GeographicLib/*.{h,hpp}"
       ]
     },
     {
@@ -65,7 +66,8 @@
       ],
       "public_header_files": [
         "ios/library/WhirlyGlobe-MaplyComponent/include/*.h",
-        "ios/library/WhirlyGlobe-MaplyComponent/include/vector_tiles/*.h"
+        "ios/library/WhirlyGlobe-MaplyComponent/include/vector_tiles/*.h",
+        "ios/library/WhirlyGlobeLib/include/GeographicLib.h"
       ],
       "private_header_files": [
         "ios/library/WhirlyGlobeLib/include/*.h",

@@ -35,7 +35,7 @@ using namespace WhirlyKit;
 
 namespace WhirlyKit {
 
-void ShapeSceneRep::enableContents(WhirlyKit::SelectionManager *selectManager, bool enable, ChangeSet &changes)
+void ShapeSceneRep::enableContents(WhirlyKit::SelectionManagerRef &selectManager, bool enable, ChangeSet &changes)
 {
     for (const SimpleIdentity idIt : drawIDs){
         changes.push_back(new OnOffChangeRequest(idIt, enable));
@@ -45,7 +45,7 @@ void ShapeSceneRep::enableContents(WhirlyKit::SelectionManager *selectManager, b
     }
 }
 
-void ShapeSceneRep::clearContents(SelectionManager *selectManager, ChangeSet &changes,TimeInterval when)
+void ShapeSceneRep::clearContents(SelectionManagerRef &selectManager, ChangeSet &changes,TimeInterval when)
 {
     for (const SimpleIdentity idIt : drawIDs){
         changes.push_back(new RemDrawableReq(idIt,when));
@@ -65,7 +65,7 @@ Shape::~Shape()
 }
 
 // Base shape doesn't make anything
-void Shape::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Shape::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
 }
 
@@ -95,7 +95,7 @@ Point3d Circle::displayCenter(WhirlyKit::CoordSystemDisplayAdapter *coordAdapter
     
 static const float sqrt2 = 1.4142135623;
 
-void Circle::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Circle::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
     CoordSystemDisplayAdapter *coordAdapter = scene->getCoordAdapter();
     
@@ -186,7 +186,7 @@ Point3d Sphere::displayCenter(WhirlyKit::CoordSystemDisplayAdapter *coordAdapter
     return dispPt;
 }
 
-void Sphere::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Sphere::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
     CoordSystemDisplayAdapter *coordAdapter = scene->getCoordAdapter();
 
@@ -290,7 +290,7 @@ Point3d Cylinder::displayCenter(WhirlyKit::CoordSystemDisplayAdapter *coordAdapt
     return dispPt;
 }
 
-void Cylinder::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Cylinder::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
     CoordSystemDisplayAdapter *coordAdapter = scene->getCoordAdapter();
     
@@ -402,7 +402,7 @@ Point3d Linear::displayCenter(WhirlyKit::CoordSystemDisplayAdapter *coordAdapter
         return Point3d(0,0,0);
 }
 
-void Linear::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Linear::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
     auto theColor = useColor ? color : regBuilder->getShapeInfo()->color;
 
@@ -436,7 +436,7 @@ Point3d Extruded::displayCenter(WhirlyKit::CoordSystemDisplayAdapter *coordAdapt
     return dispPt;
 }
 
-void Extruded::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManager *selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
+void Extruded::makeGeometryWithBuilder(WhirlyKit::ShapeDrawableBuilder *regBuilder, WhirlyKit::ShapeDrawableBuilderTri *triBuilder, WhirlyKit::Scene *scene, WhirlyKit::SelectionManagerRef &selectManager, WhirlyKit::ShapeSceneRep *sceneRep)
 {
     CoordSystemDisplayAdapter *coordAdapter = scene->getCoordAdapter();
     
@@ -571,7 +571,7 @@ Point3d Rectangle::displayCenter(CoordSystemDisplayAdapter *coordAdapter,const S
 }
 
 // Build the geometry for a circle in display space
-void Rectangle::makeGeometryWithBuilder(ShapeDrawableBuilder *regBuilder,ShapeDrawableBuilderTri *triBuilder,Scene *scene,SelectionManager *selectManager,ShapeSceneRep *sceneRep)
+void Rectangle::makeGeometryWithBuilder(ShapeDrawableBuilder *regBuilder,ShapeDrawableBuilderTri *triBuilder,Scene *scene,SelectionManagerRef &selectManager,ShapeSceneRep *sceneRep)
 {
     CoordSystemDisplayAdapter *coordAdapter = scene->getCoordAdapter();
     
@@ -628,6 +628,8 @@ ShapeManager::ShapeManager()
 
 ShapeManager::~ShapeManager()
 {
+    std::lock_guard<std::mutex> guardLock(lock);
+
     for (ShapeSceneRepSet::iterator it = shapeReps.begin(); it != shapeReps.end(); ++it)
         delete *it;
 
@@ -647,7 +649,8 @@ void ShapeManager::convertShape(Shape &shape,std::vector<WhirlyKit::GeometryRaw>
     {
         drawBuildTri.clipCoords = true;
     }
-    shape.makeGeometryWithBuilder(&drawBuildReg,&drawBuildTri,scene,NULL,NULL);
+    auto selectManage = SelectionManagerRef();
+    shape.makeGeometryWithBuilder(&drawBuildReg,&drawBuildTri,scene,selectManage,NULL);
     
     // Scrape out the triangles
     drawBuildTri.flush();
@@ -689,15 +692,16 @@ void ShapeManager::convertShape(Shape &shape,std::vector<WhirlyKit::GeometryRaw>
 /// Add an array of shapes.  The returned ID can be used to remove or modify the group of shapes.
 SimpleIdentity ShapeManager::addShapes(std::vector<Shape*> shapes, const ShapeInfo &shapeInfo, ChangeSet &changes)
 {
-    SelectionManager *selectManager = (SelectionManager *)getScene()->getManager(kWKSelectionManager);
+    auto selectManager = scene->getManager<SelectionManager>(kWKSelectionManager);
 
-    ShapeSceneRep *sceneRep = new ShapeSceneRep();
+    auto sceneRep = std::make_unique<ShapeSceneRep>();
     sceneRep->fade = shapeInfo.fade;
 
     // Figure out a good center
     Point3d center(0,0,0);
     int numObjects = 0;
-    for (auto shape : shapes) {
+    for (auto shape : shapes)
+    {
         center += shape->displayCenter(getScene()->getCoordAdapter(), shapeInfo);
         numObjects++;
     }
@@ -708,12 +712,13 @@ SimpleIdentity ShapeManager::addShapes(std::vector<Shape*> shapes, const ShapeIn
     ShapeDrawableBuilder drawBuildReg(getScene()->getCoordAdapter(),renderer,shapeInfo,true,center);
 
     // Work through the shapes
-    for (auto shape : shapes) {
+    for (auto shape : shapes)
+    {
         if (shape->clipCoords)
             drawBuildTri.setClipCoords(true);
         else
             drawBuildTri.setClipCoords(false);
-        shape->makeGeometryWithBuilder(&drawBuildReg, &drawBuildTri, getScene(), selectManager, sceneRep);
+        shape->makeGeometryWithBuilder(&drawBuildReg, &drawBuildTri, getScene(), selectManager, sceneRep.get());
     }
 
 	// Flush out remaining geometry
@@ -724,8 +729,8 @@ SimpleIdentity ShapeManager::addShapes(std::vector<Shape*> shapes, const ShapeIn
 
     SimpleIdentity shapeID = sceneRep->getId();
     {
-        std::lock_guard<std::mutex> guardLock(shapeLock);
-        shapeReps.insert(sceneRep);
+        std::lock_guard<std::mutex> guardLock(lock);
+        shapeReps.insert(sceneRep.release());   // transfer ownership
     }
 
     return shapeID;
@@ -733,9 +738,9 @@ SimpleIdentity ShapeManager::addShapes(std::vector<Shape*> shapes, const ShapeIn
 
 void ShapeManager::enableShapes(SimpleIDSet &shapeIDs,bool enable,ChangeSet &changes)
 {
-    SelectionManager *selectManager = (SelectionManager *)getScene()->getManager(kWKSelectionManager);
+    SelectionManagerRef selectManager = std::dynamic_pointer_cast<SelectionManager>(scene->getManager(kWKSelectionManager));
 
-    std::lock_guard<std::mutex> guardLock(shapeLock);
+    std::lock_guard<std::mutex> guardLock(lock);
 
     for (auto shapeID : shapeIDs) {
         ShapeSceneRep dummyRep(shapeID);
@@ -750,9 +755,9 @@ void ShapeManager::enableShapes(SimpleIDSet &shapeIDs,bool enable,ChangeSet &cha
 /// Remove a group of shapes named by the given ID
 void ShapeManager::removeShapes(SimpleIDSet &shapeIDs,ChangeSet &changes)
 {
-    SelectionManager *selectManager = (SelectionManager *)getScene()->getManager(kWKSelectionManager);
+    SelectionManagerRef selectManager = std::dynamic_pointer_cast<SelectionManager>(scene->getManager(kWKSelectionManager));
 
-    std::lock_guard<std::mutex> guardLock(shapeLock);
+    std::lock_guard<std::mutex> guardLock(lock);
 
     TimeInterval curTime = scene->getCurrentTime();
     for (auto shapeID : shapeIDs) {
@@ -776,7 +781,7 @@ void ShapeManager::removeShapes(SimpleIDSet &shapeIDs,ChangeSet &changes)
     
 void ShapeManager::setUniformBlock(const SimpleIDSet &shapeIDs,const RawDataRef &uniBlock,int bufferID,ChangeSet &changes)
 {
-    std::lock_guard<std::mutex> guardLock(shapeLock);
+    std::lock_guard<std::mutex> guardLock(lock);
 
     for (auto shapeID : shapeIDs) {
         ShapeSceneRep dummyRep(shapeID);

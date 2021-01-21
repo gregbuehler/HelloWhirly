@@ -6,5 +6,5 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'HelloWhirly' do
-        pod 'WhirlyGlobe', :git => 'https://github.com/mousebird/WhirlyGlobe.git', :branch => 'master'
+        pod 'WhirlyGlobe', :git => 'https://github.com/mousebird/WhirlyGlobe.git', :branch => 'develop'
 end

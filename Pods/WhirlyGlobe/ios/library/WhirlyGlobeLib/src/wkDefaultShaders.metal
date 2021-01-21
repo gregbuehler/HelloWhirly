@@ -404,7 +404,8 @@ vertex ProjVertexTriA vertexTri_light(
     if (vertArgs.uniDrawState.clipCoords)
         outVert.position = float4(vertPos,1.0);
     else {
-        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * float4(vertPos,1.0) + uniforms.mvMatrixDiff * float4(vertPos,1.0));
+        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0) +
+                                        uniforms.mvMatrixDiff * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0));
         pt /= pt.w;
         outVert.position = pt;
     }
@@ -442,7 +443,8 @@ vertex ProjVertexTriA vertexTri_lightExp(
     if (vertArgs.uniDrawState.clipCoords)
         outVert.position = float4(vertPos,1.0);
     else {
-        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * float4(vertPos,1.0) + uniforms.mvMatrixDiff * float4(vertPos,1.0));
+        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0) +
+                                        uniforms.mvMatrixDiff * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0));
         pt /= pt.w;
         outVert.position = pt;
     }
@@ -498,7 +500,8 @@ vertex ProjVertexTriB vertexTri_multiTex(
     if (vertArgs.uniDrawState.clipCoords)
         outVert.position = float4(vertPos,1.0);
     else {
-        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * float4(vertPos,1.0) + uniforms.mvMatrixDiff * float4(vertPos,1.0));
+        float4 pt = uniforms.pMatrix * (uniforms.mvMatrix * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0) +
+                                        uniforms.mvMatrixDiff * vertArgs.uniDrawState.singleMat * float4(vert.position,1.0));
         pt /= pt.w;
         outVert.position = pt;
     }
@@ -595,23 +598,36 @@ vertex ProjVertexTriWideVec vertexTri_wideVec(
     ProjVertexTriWideVec outVert;
     
     float3 pos = (vertArgs.uniDrawState.singleMat * float4(vert.position.xyz,1.0)).xyz;
-    
+
     // Pull out the width and possibly calculate one
     float w2 = vertArgs.wideVec.w2;
     if (w2 > 0.0) {
         w2 = w2 + vertArgs.wideVec.edge;
     }
-
-    outVert.color = vertArgs.wideVec.color * calculateFade(uniforms,vertArgs.uniDrawState);
     
-    float realWidth2 = w2 * min(uniforms.screenSizeInDisplayCoords.x,uniforms.screenSizeInDisplayCoords.y) / min(uniforms.frameSize.x,uniforms.frameSize.y);
-    float t0 = vert.c0 * realWidth2;
-    t0 = clamp(t0,0.0,1.0);
-    float3 realPos = (vert.p1 - vert.position) * t0 + vert.n0 * realWidth2 + pos;
+    // Vary the offset over time for testing
+//    float centerLine = vert.offset.z * (fmod(uniforms.currentTime,10.0)/10.0 * 200.0 - 100.0);
+    float centerLine = vert.offset.z * vertArgs.wideVec.offset;
+
+    outVert.color = vert.color * calculateFade(uniforms,vertArgs.uniDrawState);
+    
+    float pixScale = min(uniforms.screenSizeInDisplayCoords.x,uniforms.screenSizeInDisplayCoords.y) / min(uniforms.frameSize.x,uniforms.frameSize.y);
+    float realWidth2 = w2 * pixScale;
+    float realCenterLine = centerLine * pixScale;
+    
+    float t0 = vert.c0 * (realWidth2 + realCenterLine);
+    t0 = clamp(t0,-4.0,5.0);
+    float3 dir = normalize(vert.p1 - vert.position);
+    float3 realPosOffset = (vert.p1 - vert.position) * t0 +
+                     dir * realWidth2 * vert.offset.y +
+                     vert.n0 * (realCenterLine + realWidth2) +
+                     vert.n0 * realWidth2 * vert.offset.x;
+    
     float texScale = min(uniforms.frameSize.x,uniforms.frameSize.y)/(uniforms.screenSizeInDisplayCoords.x * vertArgs.wideVec.texRepeat);
     float texPos = ((vert.texInfo.z - vert.texInfo.y) * t0 + vert.texInfo.y + vert.texInfo.w * realWidth2) * texScale;
     outVert.texCoord = float2(vert.texInfo.x, texPos);
-    float4 screenPos = uniforms.pMatrix * (uniforms.mvMatrix * float4(realPos,1.0) + uniforms.mvMatrixDiff * float4(realPos,1.0));
+    float4 screenPos = uniforms.pMatrix * (uniforms.mvMatrix * float4(pos,1.0) + uniforms.mvMatrixDiff * float4(pos,1.0)) +
+                       uniforms.pMatrix * (uniforms.mvMatrix * float4(realPosOffset,0.0) + uniforms.mvMatrixDiff * float4(realPosOffset,0.0));
     screenPos /= screenPos.w;
     outVert.position = float4(screenPos.xy,0,1.0);
 
@@ -638,28 +654,42 @@ vertex ProjVertexTriWideVec vertexTri_wideVecExp(
     ProjVertexTriWideVec outVert;
     
     float3 pos = (vertArgs.uniDrawState.singleMat * float4(vert.position.xyz,1.0)).xyz;
-    
+    float zoom = ZoomFromSlot(uniforms, vertArgs.uniDrawState.zoomSlot);
+
     // Pull out the width and possibly calculate one
     float w2 = vertArgs.wideVec.w2;
-    if (vertArgs.wideVec.hasExp) {
-        float zoom = ZoomFromSlot(uniforms, vertArgs.uniDrawState.zoomSlot);
+    if (vertArgs.wideVec.hasExp)
         w2 = ExpCalculateFloat(vertArgs.wideVecExp.widthExp, zoom, 2.0*w2)/2.0;
-    }
     if (w2 > 0.0) {
         w2 = w2 + vertArgs.wideVec.edge;
     }
-
-    outVert.color = vertArgs.wideVec.color * calculateFade(uniforms,vertArgs.uniDrawState);
     
-    float realWidth2 = w2 * min(uniforms.screenSizeInDisplayCoords.x,uniforms.screenSizeInDisplayCoords.y) / min(uniforms.frameSize.x,uniforms.frameSize.y);
-    float t0 = vert.c0 * realWidth2;
-    t0 = clamp(t0,0.0,1.0);
-    float3 posOffset = (vert.p1 - vert.position) * t0 + vert.n0 * realWidth2;
+    // Pull out the center line offset, or calculate one
+    float centerLine = vertArgs.wideVec.offset;
+    if (vertArgs.wideVec.hasExp) {
+        centerLine = ExpCalculateFloat(vertArgs.wideVecExp.offsetExp, zoom, centerLine);
+    }
+    centerLine = vert.offset.z * centerLine;
+
+    outVert.color = vert.color * calculateFade(uniforms,vertArgs.uniDrawState);
+    
+    float pixScale = min(uniforms.screenSizeInDisplayCoords.x,uniforms.screenSizeInDisplayCoords.y) / min(uniforms.frameSize.x,uniforms.frameSize.y);
+    float realWidth2 = w2 * pixScale;
+    float realCenterLine = centerLine * pixScale;
+    
+    float t0 = vert.c0 * (realWidth2 + realCenterLine);
+    t0 = clamp(t0,-4.0,5.0);
+    float3 dir = normalize(vert.p1 - vert.position);
+    float3 realPosOffset = (vert.p1 - vert.position) * t0 +
+                     dir * realWidth2 * vert.offset.y +
+                     vert.n0 * (realCenterLine + realWidth2) +
+                     vert.n0 * realWidth2 * vert.offset.x;
+    
     float texScale = min(uniforms.frameSize.x,uniforms.frameSize.y)/(uniforms.screenSizeInDisplayCoords.x * vertArgs.wideVec.texRepeat);
     float texPos = ((vert.texInfo.z - vert.texInfo.y) * t0 + vert.texInfo.y + vert.texInfo.w * realWidth2) * texScale;
     outVert.texCoord = float2(vert.texInfo.x, texPos);
     float4 screenPos = uniforms.pMatrix * (uniforms.mvMatrix * float4(pos,1.0) + uniforms.mvMatrixDiff * float4(pos,1.0)) +
-            uniforms.pMatrix * (uniforms.mvMatrix * float4(posOffset,0.0) + uniforms.mvMatrixDiff * float4(posOffset,0.0));
+                       uniforms.pMatrix * (uniforms.mvMatrix * float4(realPosOffset,0.0) + uniforms.mvMatrixDiff * float4(realPosOffset,0.0));
     screenPos /= screenPos.w;
     outVert.position = float4(screenPos.xy,0,1.0);
 
@@ -685,10 +715,12 @@ fragment float4 fragmentTri_wideVec(
     int numTextures = TexturesBase(texArgs.texPresent);
 
     // Dot/dash pattern
-    float patternVal = 1.0;
+    float4 patternColor(1.0,1.0,1.0,1.0);
     if (numTextures > 0) {
         constexpr sampler sampler2d(coord::normalized, address::repeat, filter::linear);
-        patternVal = texArgs.tex[0].sample(sampler2d, float2(0.5,vert.texCoord.y)).r;
+        // Just pulling the alpha at the moment
+        // If we use the rest, we get interpolation down to zero, which isn't quite what we want here
+        patternColor.a = texArgs.tex[0].sample(sampler2d, vert.texCoord).a;
     }
     float alpha = 1.0;
     float across = vert.w2 * vert.texCoord.x;
@@ -697,7 +729,8 @@ fragment float4 fragmentTri_wideVec(
     if (across > vert.w2-fragArgs.wideVec.edge)
         alpha = (vert.w2-across)/fragArgs.wideVec.edge;
     
-    return vert.dotProd > 0.0 ? float4(fragArgs.wideVec.color.rgb,fragArgs.wideVec.color.a*alpha) * patternVal : float4(0.0);
+    return vert.dotProd > 0.0 ?
+    float4(vert.color.rgb*patternColor.rgb,vert.color.a*alpha*patternColor.a)  : float4(0.0);
 }
 
 struct VertexTriSSArgBufferA {

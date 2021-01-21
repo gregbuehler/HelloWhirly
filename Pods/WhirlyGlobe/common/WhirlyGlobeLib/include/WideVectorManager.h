@@ -3,7 +3,7 @@
  *  WhirlyGlobeLib
  *
  *  Created by Steve Gifford on 4/29/14.
- *  Copyright 2011-2019 mousebird consulting.
+ *  Copyright 2011-2020 mousebird consulting.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -33,6 +33,8 @@
 namespace WhirlyKit
 {
 
+class VectorInfo;
+
 /// Vectors are widened in real world or screen coordinates
 typedef enum {WideVecCoordReal,WideVecCoordScreen} WideVectorCoordsType;
 
@@ -52,6 +54,7 @@ public:
 
     RGBAColor color;
     float width;
+    float offset;
     float repeatSize;
     float edgeSize;
     float subdivEps;
@@ -62,6 +65,7 @@ public:
     float miterLimit;
     
     FloatExpressionInfoRef widthExp;
+    FloatExpressionInfoRef offsetExp;
     FloatExpressionInfoRef opacityExp;
     ColorExpressionInfoRef colorExp;
 };
@@ -105,13 +109,16 @@ public:
     
     /// Make an instance of the give vectors with the given attributes and return an ID to identify them.
     SimpleIdentity instanceVectors(SimpleIdentity vecID,const WideVectorInfo &desc,ChangeSet &changes);
-    
+
+    /// Change the vector(s) represented by the given ID
+    void changeVectors(SimpleIdentity vecID,const WideVectorInfo &vecInfo,ChangeSet &changes);
+
     /// Remove a gruop of vectors named by the given ID
     void removeVectors(SimpleIDSet &vecIDs,ChangeSet &changes);
     
 protected:
-    std::mutex vecLock;
     WideVectorSceneRepSet sceneReps;
 };
+typedef std::shared_ptr<WideVectorManager> WideVectorManagerRef;
     
 }
