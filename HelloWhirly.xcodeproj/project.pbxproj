@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		27B3A12925B9FE650036A2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12725B9FE650036A2CD /* Main.storyboard */; };
 		27B3A12B25B9FE680036A2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12A25B9FE680036A2CD /* Assets.xcassets */; };
 		27B3A12E25B9FE680036A2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12C25B9FE680036A2CD /* LaunchScreen.storyboard */; };
+		27B3A14425BA00630036A2CD /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */; };
+		636E91EE815F107371FECFB7 /* Pods_HelloWhirly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		27B3A12A25B9FE680036A2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B3A12D25B9FE680036A2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B3A12F25B9FE680036A2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27B3A13E25B9FFFD0036A2CD /* HelloWhirly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWhirly-Bridging-Header.h"; sourceTree = "<group>"; };
+		27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "geography-class_medres.mbtiles"; sourceTree = "<group>"; };
+		535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWhirly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A785FC5DB5325217B9CF8DCB /* Pods-HelloWhirly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWhirly.release.xcconfig"; path = "Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly.release.xcconfig"; sourceTree = "<group>"; };
+		B54283668CFEC7C6390B1A6F /* Pods-HelloWhirly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWhirly.debug.xcconfig"; path = "Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636E91EE815F107371FECFB7 /* Pods_HelloWhirly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 			children = (
 				27B3A12025B9FE650036A2CD /* HelloWhirly */,
 				27B3A11F25B9FE650036A2CD /* Products */,
+				9BE03DF90627981F9629C533 /* Pods */,
+				33D0DB3E13C4E548D687410D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +66,7 @@
 		27B3A12025B9FE650036A2CD /* HelloWhirly */ = {
 			isa = PBXGroup;
 			children = (
+				27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */,
 				27B3A12125B9FE650036A2CD /* AppDelegate.swift */,
 				27B3A12325B9FE650036A2CD /* SceneDelegate.swift */,
 				27B3A12525B9FE650036A2CD /* ViewController.swift */,
@@ -63,8 +74,26 @@
 				27B3A12A25B9FE680036A2CD /* Assets.xcassets */,
 				27B3A12C25B9FE680036A2CD /* LaunchScreen.storyboard */,
 				27B3A12F25B9FE680036A2CD /* Info.plist */,
+				27B3A13E25B9FFFD0036A2CD /* HelloWhirly-Bridging-Header.h */,
 			);
 			path = HelloWhirly;
+			sourceTree = "<group>";
+		};
+		33D0DB3E13C4E548D687410D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BE03DF90627981F9629C533 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B54283668CFEC7C6390B1A6F /* Pods-HelloWhirly.debug.xcconfig */,
+				A785FC5DB5325217B9CF8DCB /* Pods-HelloWhirly.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B3A13225B9FE680036A2CD /* Build configuration list for PBXNativeTarget "HelloWhirly" */;
 			buildPhases = (
+				35000CFFC1AC09FF33764820 /* [CP] Check Pods Manifest.lock */,
 				27B3A11A25B9FE650036A2CD /* Sources */,
 				27B3A11B25B9FE650036A2CD /* Frameworks */,
 				27B3A11C25B9FE650036A2CD /* Resources */,
+				C5957C5445D86083A18AC1CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +129,7 @@
 				TargetAttributes = {
 					27B3A11D25B9FE650036A2CD = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -124,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B3A14425BA00630036A2CD /* geography-class_medres.mbtiles in Resources */,
 				27B3A12E25B9FE680036A2CD /* LaunchScreen.storyboard in Resources */,
 				27B3A12B25B9FE680036A2CD /* Assets.xcassets in Resources */,
 				27B3A12925B9FE650036A2CD /* Main.storyboard in Resources */,
@@ -131,6 +164,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35000CFFC1AC09FF33764820 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloWhirly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5957C5445D86083A18AC1CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27B3A11A25B9FE650036A2CD /* Sources */ = {
@@ -283,9 +358,11 @@
 		};
 		27B3A13325B9FE680036A2CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54283668CFEC7C6390B1A6F /* Pods-HelloWhirly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloWhirly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +371,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HelloWhirly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWhirly/HelloWhirly-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,9 +380,11 @@
 		};
 		27B3A13425B9FE680036A2CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A785FC5DB5325217B9CF8DCB /* Pods-HelloWhirly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloWhirly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HelloWhirly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWhirly/HelloWhirly-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
