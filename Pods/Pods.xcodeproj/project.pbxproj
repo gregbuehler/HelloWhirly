@@ -1066,11 +1066,9 @@
 		46EB2E00008980 /* proj4-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00008970 /* proj4-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E000089C0 /* proj4-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000089B0 /* proj4-dummy.m */; };
 		46EB2E000089E0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000089D0 /* CoreLocation.framework */; };
-		46EB2E00008A00 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000089F0 /* MobileCoreServices.framework */; };
 		46EB2E00008A20 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008A10 /* SystemConfiguration.framework */; };
 		46EB2E00008A40 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008A30 /* CFNetwork.framework */; };
 		46EB2E00008A60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008A50 /* UIKit.framework */; };
-		46EB2E00008A80 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008A70 /* OpenGLES.framework */; };
 		46EB2E00008AA0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008A90 /* Accelerate.framework */; };
 		46EB2E00008AC0 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008AB0 /* MetalKit.framework */; };
 		46EB2E00008AE0 /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008AD0 /* MetalPerformanceShaders.framework */; };
@@ -1082,6 +1080,7 @@
 		46EB2E00008DC0 /* libjson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008DB0 /* libjson.framework */; };
 		46EB2E00008E00 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008DF0 /* KissXML.framework */; };
 		46EB2E00008E40 /* proj4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00008E30 /* proj4.framework */; };
+		9B4E537E25BA585B000F364E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4E537D25BA585B000F364E /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1244,8 +1243,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3F563361D62B3B152CA93CE83EEE4394 /* WhirlyGlobe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WhirlyGlobe.framework; path = WhirlyGlobe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E00000110 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3F563361D62B3B152CA93CE83EEE4394 /* WhirlyGlobe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WhirlyGlobe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E00000110 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E00000130 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		46EB2E00000140 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
 		46EB2E00000150 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1509,7 +1508,7 @@
 		46EB2E000011A0 /* VectorManager.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = VectorManager.cpp; path = common/WhirlyGlobeLib/src/VectorManager.cpp; sourceTree = "<group>"; };
 		46EB2E000011B0 /* VectorObject.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = VectorObject.cpp; path = common/WhirlyGlobeLib/src/VectorObject.cpp; sourceTree = "<group>"; };
 		46EB2E000011C0 /* VectorTilePBFParser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = VectorTilePBFParser.cpp; path = common/WhirlyGlobeLib/src/VectorTilePBFParser.cpp; sourceTree = "<group>"; };
-		46EB2E000011D0 /* vector_tile.pb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vector_tile.pb.c; path = common/WhirlyGlobeLib/src/vector_tile.pb.c; sourceTree = "<group>"; };
+		46EB2E000011D0 /* vector_tile.pb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = vector_tile.pb.c; path = common/WhirlyGlobeLib/src/vector_tile.pb.c; sourceTree = "<group>"; };
 		46EB2E000011E0 /* VertexAttribute.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = VertexAttribute.cpp; path = common/WhirlyGlobeLib/src/VertexAttribute.cpp; sourceTree = "<group>"; };
 		46EB2E000011F0 /* VertexAttributeGLES.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = VertexAttributeGLES.cpp; path = common/WhirlyGlobeLib/src/VertexAttributeGLES.cpp; sourceTree = "<group>"; };
 		46EB2E00001200 /* WhirlyGeometry.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WhirlyGeometry.cpp; path = common/WhirlyGlobeLib/src/WhirlyGeometry.cpp; sourceTree = "<group>"; };
@@ -1520,52 +1519,52 @@
 		46EB2E00001250 /* WideVectorDrawableBuilderGLES.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WideVectorDrawableBuilderGLES.cpp; path = common/WhirlyGlobeLib/src/WideVectorDrawableBuilderGLES.cpp; sourceTree = "<group>"; };
 		46EB2E00001260 /* WideVectorManager.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WideVectorManager.cpp; path = common/WhirlyGlobeLib/src/WideVectorManager.cpp; sourceTree = "<group>"; };
 		46EB2E00001270 /* WrapperGLES.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WrapperGLES.cpp; path = common/WhirlyGlobeLib/src/WrapperGLES.cpp; sourceTree = "<group>"; };
-		46EB2E00001280 /* BasicDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BasicDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001290 /* BasicDrawableInstanceBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BasicDrawableInstanceBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableInstanceBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E000012A0 /* BasicDrawableInstanceMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BasicDrawableInstanceMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableInstanceMTL.mm; sourceTree = "<group>"; };
-		46EB2E000012B0 /* BasicDrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BasicDrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableMTL.mm; sourceTree = "<group>"; };
-		46EB2E000012C0 /* BillboardDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BillboardDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BillboardDrawableBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E000012D0 /* ComponentManager_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ComponentManager_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ComponentManager_iOS.mm; sourceTree = "<group>"; };
-		46EB2E000012E0 /* Dictinary_NSDictionary.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = Dictinary_NSDictionary.mm; path = ios/library/WhirlyGlobeLib/src/Dictinary_NSDictionary.mm; sourceTree = "<group>"; };
-		46EB2E000012F0 /* DrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = DrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/DrawableMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001300 /* DynamicTextureAtlasMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = DynamicTextureAtlasMTL.mm; path = ios/library/WhirlyGlobeLib/src/DynamicTextureAtlasMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001310 /* EAGLView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = EAGLView.mm; path = ios/library/WhirlyGlobeLib/src/EAGLView.mm; sourceTree = "<group>"; };
-		46EB2E00001320 /* FontTextureManager_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FontTextureManager_iOS.mm; path = ios/library/WhirlyGlobeLib/src/FontTextureManager_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001330 /* GeographicLib.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GeographicLib.mm; path = ios/library/WhirlyGlobeLib/src/GeographicLib.mm; sourceTree = "<group>"; };
-		46EB2E00001340 /* GlobeView_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeView_iOS.mm; path = ios/library/WhirlyGlobeLib/src/GlobeView_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001350 /* ImageTile_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageTile_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ImageTile_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001360 /* LayerThread.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = LayerThread.mm; path = ios/library/WhirlyGlobeLib/src/LayerThread.mm; sourceTree = "<group>"; };
-		46EB2E00001370 /* LayerViewWatcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = LayerViewWatcher.mm; path = ios/library/WhirlyGlobeLib/src/LayerViewWatcher.mm; sourceTree = "<group>"; };
-		46EB2E00001380 /* LayoutLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = LayoutLayer.mm; path = ios/library/WhirlyGlobeLib/src/LayoutLayer.mm; sourceTree = "<group>"; };
-		46EB2E00001390 /* MapView_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MapView_iOS.mm; path = ios/library/WhirlyGlobeLib/src/MapView_iOS.mm; sourceTree = "<group>"; };
-		46EB2E000013A0 /* MTLView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MTLView.mm; path = ios/library/WhirlyGlobeLib/src/MTLView.mm; sourceTree = "<group>"; };
+		46EB2E00001280 /* BasicDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = BasicDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001290 /* BasicDrawableInstanceBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = BasicDrawableInstanceBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableInstanceBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E000012A0 /* BasicDrawableInstanceMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = BasicDrawableInstanceMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableInstanceMTL.mm; sourceTree = "<group>"; };
+		46EB2E000012B0 /* BasicDrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = BasicDrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/BasicDrawableMTL.mm; sourceTree = "<group>"; };
+		46EB2E000012C0 /* BillboardDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = BillboardDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/BillboardDrawableBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E000012D0 /* ComponentManager_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ComponentManager_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ComponentManager_iOS.mm; sourceTree = "<group>"; };
+		46EB2E000012E0 /* Dictinary_NSDictionary.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = Dictinary_NSDictionary.mm; path = ios/library/WhirlyGlobeLib/src/Dictinary_NSDictionary.mm; sourceTree = "<group>"; };
+		46EB2E000012F0 /* DrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = DrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/DrawableMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001300 /* DynamicTextureAtlasMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = DynamicTextureAtlasMTL.mm; path = ios/library/WhirlyGlobeLib/src/DynamicTextureAtlasMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001310 /* EAGLView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = ios/library/WhirlyGlobeLib/src/EAGLView.mm; sourceTree = "<group>"; };
+		46EB2E00001320 /* FontTextureManager_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = FontTextureManager_iOS.mm; path = ios/library/WhirlyGlobeLib/src/FontTextureManager_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001330 /* GeographicLib.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GeographicLib.mm; path = ios/library/WhirlyGlobeLib/src/GeographicLib.mm; sourceTree = "<group>"; };
+		46EB2E00001340 /* GlobeView_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeView_iOS.mm; path = ios/library/WhirlyGlobeLib/src/GlobeView_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001350 /* ImageTile_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageTile_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ImageTile_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001360 /* LayerThread.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = LayerThread.mm; path = ios/library/WhirlyGlobeLib/src/LayerThread.mm; sourceTree = "<group>"; };
+		46EB2E00001370 /* LayerViewWatcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = LayerViewWatcher.mm; path = ios/library/WhirlyGlobeLib/src/LayerViewWatcher.mm; sourceTree = "<group>"; };
+		46EB2E00001380 /* LayoutLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = LayoutLayer.mm; path = ios/library/WhirlyGlobeLib/src/LayoutLayer.mm; sourceTree = "<group>"; };
+		46EB2E00001390 /* MapView_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MapView_iOS.mm; path = ios/library/WhirlyGlobeLib/src/MapView_iOS.mm; sourceTree = "<group>"; };
+		46EB2E000013A0 /* MTLView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MTLView.mm; path = ios/library/WhirlyGlobeLib/src/MTLView.mm; sourceTree = "<group>"; };
 		46EB2E000013B0 /* NSDictionary+Stuff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Stuff.m"; path = "ios/library/WhirlyGlobeLib/src/NSDictionary+Stuff.m"; sourceTree = "<group>"; };
-		46EB2E000013C0 /* NSString+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "NSString+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/NSString+Stuff.mm"; sourceTree = "<group>"; };
-		46EB2E000013D0 /* ParticleSystemDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ParticleSystemDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/ParticleSystemDrawableBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E000013E0 /* ParticleSystemDrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ParticleSystemDrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/ParticleSystemDrawableMTL.mm; sourceTree = "<group>"; };
-		46EB2E000013F0 /* Platform.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = Platform.mm; path = ios/library/WhirlyGlobeLib/src/Platform.mm; sourceTree = "<group>"; };
-		46EB2E00001400 /* ProgramMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ProgramMTL.mm; path = ios/library/WhirlyGlobeLib/src/ProgramMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001410 /* QuadDisplayLayerNew.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = QuadDisplayLayerNew.mm; path = ios/library/WhirlyGlobeLib/src/QuadDisplayLayerNew.mm; sourceTree = "<group>"; };
-		46EB2E00001420 /* QuadImageFrameLoader_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = QuadImageFrameLoader_iOS.mm; path = ios/library/WhirlyGlobeLib/src/QuadImageFrameLoader_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001430 /* RawData_NSData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RawData_NSData.mm; path = ios/library/WhirlyGlobeLib/src/RawData_NSData.mm; sourceTree = "<group>"; };
-		46EB2E00001440 /* RenderTargetMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RenderTargetMTL.mm; path = ios/library/WhirlyGlobeLib/src/RenderTargetMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001450 /* SceneMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SceneMTL.mm; path = ios/library/WhirlyGlobeLib/src/SceneMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001460 /* SceneRendererGLES_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SceneRendererGLES_iOS.mm; path = ios/library/WhirlyGlobeLib/src/SceneRendererGLES_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001470 /* SceneRendererMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SceneRendererMTL.mm; path = ios/library/WhirlyGlobeLib/src/SceneRendererMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001480 /* ScreenObject_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ScreenObject_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ScreenObject_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001490 /* ScreenSpaceDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ScreenSpaceDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/ScreenSpaceDrawableBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E000014A0 /* SingleLabel_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SingleLabel_iOS.mm; path = ios/library/WhirlyGlobeLib/src/SingleLabel_iOS.mm; sourceTree = "<group>"; };
-		46EB2E000014B0 /* TextureMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = TextureMTL.mm; path = ios/library/WhirlyGlobeLib/src/TextureMTL.mm; sourceTree = "<group>"; };
-		46EB2E000014C0 /* Texture_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = Texture_iOS.mm; path = ios/library/WhirlyGlobeLib/src/Texture_iOS.mm; sourceTree = "<group>"; };
-		46EB2E000014D0 /* UIColor+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIColor+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/UIColor+Stuff.mm"; sourceTree = "<group>"; };
-		46EB2E000014E0 /* UIImage+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIImage+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/UIImage+Stuff.mm"; sourceTree = "<group>"; };
-		46EB2E000014F0 /* UpdateDisplayLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = UpdateDisplayLayer.mm; path = ios/library/WhirlyGlobeLib/src/UpdateDisplayLayer.mm; sourceTree = "<group>"; };
-		46EB2E00001500 /* VectorData_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = VectorData_iOS.mm; path = ios/library/WhirlyGlobeLib/src/VectorData_iOS.mm; sourceTree = "<group>"; };
-		46EB2E00001510 /* VertexAttributeMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = VertexAttributeMTL.mm; path = ios/library/WhirlyGlobeLib/src/VertexAttributeMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001520 /* WhirlyKitLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WhirlyKitLog.mm; path = ios/library/WhirlyGlobeLib/src/WhirlyKitLog.mm; sourceTree = "<group>"; };
-		46EB2E00001530 /* WideVectorDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WideVectorDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/WideVectorDrawableBuilderMTL.mm; sourceTree = "<group>"; };
-		46EB2E00001540 /* wkDefaultShaders.metal */ = {isa = PBXFileReference; includeInIndex = 1; name = wkDefaultShaders.metal; path = ios/library/WhirlyGlobeLib/src/wkDefaultShaders.metal; sourceTree = "<group>"; };
-		46EB2E00001550 /* WrapperMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WrapperMTL.mm; path = ios/library/WhirlyGlobeLib/src/WrapperMTL.mm; sourceTree = "<group>"; };
+		46EB2E000013C0 /* NSString+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSString+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/NSString+Stuff.mm"; sourceTree = "<group>"; };
+		46EB2E000013D0 /* ParticleSystemDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ParticleSystemDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/ParticleSystemDrawableBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E000013E0 /* ParticleSystemDrawableMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ParticleSystemDrawableMTL.mm; path = ios/library/WhirlyGlobeLib/src/ParticleSystemDrawableMTL.mm; sourceTree = "<group>"; };
+		46EB2E000013F0 /* Platform.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = Platform.mm; path = ios/library/WhirlyGlobeLib/src/Platform.mm; sourceTree = "<group>"; };
+		46EB2E00001400 /* ProgramMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ProgramMTL.mm; path = ios/library/WhirlyGlobeLib/src/ProgramMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001410 /* QuadDisplayLayerNew.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = QuadDisplayLayerNew.mm; path = ios/library/WhirlyGlobeLib/src/QuadDisplayLayerNew.mm; sourceTree = "<group>"; };
+		46EB2E00001420 /* QuadImageFrameLoader_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = QuadImageFrameLoader_iOS.mm; path = ios/library/WhirlyGlobeLib/src/QuadImageFrameLoader_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001430 /* RawData_NSData.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RawData_NSData.mm; path = ios/library/WhirlyGlobeLib/src/RawData_NSData.mm; sourceTree = "<group>"; };
+		46EB2E00001440 /* RenderTargetMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RenderTargetMTL.mm; path = ios/library/WhirlyGlobeLib/src/RenderTargetMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001450 /* SceneMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneMTL.mm; path = ios/library/WhirlyGlobeLib/src/SceneMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001460 /* SceneRendererGLES_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneRendererGLES_iOS.mm; path = ios/library/WhirlyGlobeLib/src/SceneRendererGLES_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001470 /* SceneRendererMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneRendererMTL.mm; path = ios/library/WhirlyGlobeLib/src/SceneRendererMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001480 /* ScreenObject_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ScreenObject_iOS.mm; path = ios/library/WhirlyGlobeLib/src/ScreenObject_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001490 /* ScreenSpaceDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ScreenSpaceDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/ScreenSpaceDrawableBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E000014A0 /* SingleLabel_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = SingleLabel_iOS.mm; path = ios/library/WhirlyGlobeLib/src/SingleLabel_iOS.mm; sourceTree = "<group>"; };
+		46EB2E000014B0 /* TextureMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = TextureMTL.mm; path = ios/library/WhirlyGlobeLib/src/TextureMTL.mm; sourceTree = "<group>"; };
+		46EB2E000014C0 /* Texture_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = Texture_iOS.mm; path = ios/library/WhirlyGlobeLib/src/Texture_iOS.mm; sourceTree = "<group>"; };
+		46EB2E000014D0 /* UIColor+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "UIColor+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/UIColor+Stuff.mm"; sourceTree = "<group>"; };
+		46EB2E000014E0 /* UIImage+Stuff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "UIImage+Stuff.mm"; path = "ios/library/WhirlyGlobeLib/src/UIImage+Stuff.mm"; sourceTree = "<group>"; };
+		46EB2E000014F0 /* UpdateDisplayLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = UpdateDisplayLayer.mm; path = ios/library/WhirlyGlobeLib/src/UpdateDisplayLayer.mm; sourceTree = "<group>"; };
+		46EB2E00001500 /* VectorData_iOS.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = VectorData_iOS.mm; path = ios/library/WhirlyGlobeLib/src/VectorData_iOS.mm; sourceTree = "<group>"; };
+		46EB2E00001510 /* VertexAttributeMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = VertexAttributeMTL.mm; path = ios/library/WhirlyGlobeLib/src/VertexAttributeMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001520 /* WhirlyKitLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WhirlyKitLog.mm; path = ios/library/WhirlyGlobeLib/src/WhirlyKitLog.mm; sourceTree = "<group>"; };
+		46EB2E00001530 /* WideVectorDrawableBuilderMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WideVectorDrawableBuilderMTL.mm; path = ios/library/WhirlyGlobeLib/src/WideVectorDrawableBuilderMTL.mm; sourceTree = "<group>"; };
+		46EB2E00001540 /* wkDefaultShaders.metal */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.metal; name = wkDefaultShaders.metal; path = ios/library/WhirlyGlobeLib/src/wkDefaultShaders.metal; sourceTree = "<group>"; };
+		46EB2E00001550 /* WrapperMTL.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WrapperMTL.mm; path = ios/library/WhirlyGlobeLib/src/WrapperMTL.mm; sourceTree = "<group>"; };
 		46EB2E00001560 /* BasicDrawableBuilderMTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicDrawableBuilderMTL.h; path = ios/library/WhirlyGlobeLib/include/BasicDrawableBuilderMTL.h; sourceTree = "<group>"; };
 		46EB2E00001570 /* BasicDrawableInstanceBuilderMTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicDrawableInstanceBuilderMTL.h; path = ios/library/WhirlyGlobeLib/include/BasicDrawableInstanceBuilderMTL.h; sourceTree = "<group>"; };
 		46EB2E00001580 /* BasicDrawableInstanceMTL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicDrawableInstanceMTL.h; path = ios/library/WhirlyGlobeLib/include/BasicDrawableInstanceMTL.h; sourceTree = "<group>"; };
@@ -1756,82 +1755,82 @@
 		46EB2E00002110 /* MaplyVectorObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaplyVectorObject.h; path = "ios/library/WhirlyGlobe-MaplyComponent/include/visual_objects/MaplyVectorObject.h"; sourceTree = "<group>"; };
 		46EB2E00002120 /* WhirlyGlobe-Maply-Umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WhirlyGlobe-Maply-Umbrella.h"; path = "ios/library/WhirlyGlobe-MaplyComponent/include/WhirlyGlobe-Maply-Umbrella.h"; sourceTree = "<group>"; };
 		46EB2E00002130 /* WhirlyGlobeComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WhirlyGlobeComponent.h; path = "ios/library/WhirlyGlobe-MaplyComponent/include/WhirlyGlobeComponent.h"; sourceTree = "<group>"; };
-		46EB2E00002140 /* MaplyActiveObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyActiveObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyActiveObject.mm"; sourceTree = "<group>"; };
-		46EB2E00002150 /* MaplyAnnotation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyAnnotation.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyAnnotation.mm"; sourceTree = "<group>"; };
-		46EB2E00002160 /* MaplyBaseInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyBaseInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyBaseInteractionLayer.mm"; sourceTree = "<group>"; };
-		46EB2E00002170 /* MaplyBaseViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyBaseViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyBaseViewController.mm"; sourceTree = "<group>"; };
-		46EB2E00002180 /* MaplyCluster.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyCluster.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyCluster.mm"; sourceTree = "<group>"; };
-		46EB2E00002190 /* MaplyControllerLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyControllerLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyControllerLayer.mm"; sourceTree = "<group>"; };
-		46EB2E000021A0 /* MaplyGlobeRenderController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyGlobeRenderController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyGlobeRenderController.mm"; sourceTree = "<group>"; };
-		46EB2E000021B0 /* MaplyInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyInteractionLayer.mm"; sourceTree = "<group>"; };
-		46EB2E000021C0 /* MaplyRenderController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyRenderController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyRenderController.mm"; sourceTree = "<group>"; };
+		46EB2E00002140 /* MaplyActiveObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyActiveObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyActiveObject.mm"; sourceTree = "<group>"; };
+		46EB2E00002150 /* MaplyAnnotation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyAnnotation.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyAnnotation.mm"; sourceTree = "<group>"; };
+		46EB2E00002160 /* MaplyBaseInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyBaseInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyBaseInteractionLayer.mm"; sourceTree = "<group>"; };
+		46EB2E00002170 /* MaplyBaseViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyBaseViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyBaseViewController.mm"; sourceTree = "<group>"; };
+		46EB2E00002180 /* MaplyCluster.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyCluster.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyCluster.mm"; sourceTree = "<group>"; };
+		46EB2E00002190 /* MaplyControllerLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyControllerLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyControllerLayer.mm"; sourceTree = "<group>"; };
+		46EB2E000021A0 /* MaplyGlobeRenderController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyGlobeRenderController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyGlobeRenderController.mm"; sourceTree = "<group>"; };
+		46EB2E000021B0 /* MaplyInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyInteractionLayer.mm"; sourceTree = "<group>"; };
+		46EB2E000021C0 /* MaplyRenderController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyRenderController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyRenderController.mm"; sourceTree = "<group>"; };
 		46EB2E000021D0 /* MaplySharedAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplySharedAttributes.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplySharedAttributes.m"; sourceTree = "<group>"; };
-		46EB2E000021E0 /* MaplyUpdateLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyUpdateLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyUpdateLayer.mm"; sourceTree = "<group>"; };
-		46EB2E000021F0 /* MaplyViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyViewController.mm"; sourceTree = "<group>"; };
+		46EB2E000021E0 /* MaplyUpdateLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyUpdateLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyUpdateLayer.mm"; sourceTree = "<group>"; };
+		46EB2E000021F0 /* MaplyViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyViewController.mm"; sourceTree = "<group>"; };
 		46EB2E00002200 /* MaplyViewTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyViewTracker.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/MaplyViewTracker.m"; sourceTree = "<group>"; };
-		46EB2E00002210 /* WGInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WGInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WGInteractionLayer.mm"; sourceTree = "<group>"; };
-		46EB2E00002220 /* WGViewControllerLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WGViewControllerLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WGViewControllerLayer.mm"; sourceTree = "<group>"; };
-		46EB2E00002230 /* WhirlyGlobeViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WhirlyGlobeViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WhirlyGlobeViewController.mm"; sourceTree = "<group>"; };
-		46EB2E00002240 /* MaplyMBTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyMBTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/data_sources/MaplyMBTileFetcher.mm"; sourceTree = "<group>"; };
-		46EB2E00002250 /* MaplyWMSTileSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyWMSTileSource.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/data_sources/MaplyWMSTileSource.mm"; sourceTree = "<group>"; };
-		46EB2E00002260 /* GlobeDoubleTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeDoubleTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeDoubleTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002270 /* GlobeDoubleTapDragDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeDoubleTapDragDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeDoubleTapDragDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002280 /* GlobePanDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobePanDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobePanDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002290 /* GlobePinchDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobePinchDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobePinchDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E000022A0 /* GlobeRotateDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeRotateDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeRotateDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E000022B0 /* GlobeTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E000022C0 /* GlobeTapMessage.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeTapMessage.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTapMessage.mm"; sourceTree = "<group>"; };
-		46EB2E000022D0 /* GlobeTiltDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeTiltDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTiltDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E000022E0 /* GlobeTwoFingerTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GlobeTwoFingerTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTwoFingerTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E000022F0 /* Maply3dTouchPreviewDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = Maply3dTouchPreviewDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/Maply3dTouchPreviewDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002300 /* MaplyDoubleTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyDoubleTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyDoubleTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002310 /* MaplyDoubleTapDragDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyDoubleTapDragDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyDoubleTapDragDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002320 /* MaplyPanDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyPanDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyPanDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002330 /* MaplyPinchDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyPinchDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyPinchDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002340 /* MaplyRotateDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyRotateDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyRotateDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002350 /* MaplyTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002360 /* MaplyTapMessage.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTapMessage.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTapMessage.mm"; sourceTree = "<group>"; };
-		46EB2E00002370 /* MaplyTouchCancelAnimationDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTouchCancelAnimationDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTouchCancelAnimationDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002380 /* MaplyTwoFingerTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTwoFingerTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTwoFingerTapDelegate.mm"; sourceTree = "<group>"; };
-		46EB2E00002390 /* MaplyZoomGestureDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyZoomGestureDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyZoomGestureDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002210 /* WGInteractionLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WGInteractionLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WGInteractionLayer.mm"; sourceTree = "<group>"; };
+		46EB2E00002220 /* WGViewControllerLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WGViewControllerLayer.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WGViewControllerLayer.mm"; sourceTree = "<group>"; };
+		46EB2E00002230 /* WhirlyGlobeViewController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WhirlyGlobeViewController.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/control/WhirlyGlobeViewController.mm"; sourceTree = "<group>"; };
+		46EB2E00002240 /* MaplyMBTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyMBTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/data_sources/MaplyMBTileFetcher.mm"; sourceTree = "<group>"; };
+		46EB2E00002250 /* MaplyWMSTileSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyWMSTileSource.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/data_sources/MaplyWMSTileSource.mm"; sourceTree = "<group>"; };
+		46EB2E00002260 /* GlobeDoubleTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeDoubleTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeDoubleTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002270 /* GlobeDoubleTapDragDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeDoubleTapDragDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeDoubleTapDragDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002280 /* GlobePanDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobePanDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobePanDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002290 /* GlobePinchDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobePinchDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobePinchDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E000022A0 /* GlobeRotateDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeRotateDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeRotateDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E000022B0 /* GlobeTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E000022C0 /* GlobeTapMessage.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeTapMessage.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTapMessage.mm"; sourceTree = "<group>"; };
+		46EB2E000022D0 /* GlobeTiltDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeTiltDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTiltDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E000022E0 /* GlobeTwoFingerTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GlobeTwoFingerTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/GlobeTwoFingerTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E000022F0 /* Maply3dTouchPreviewDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = Maply3dTouchPreviewDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/Maply3dTouchPreviewDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002300 /* MaplyDoubleTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyDoubleTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyDoubleTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002310 /* MaplyDoubleTapDragDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyDoubleTapDragDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyDoubleTapDragDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002320 /* MaplyPanDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyPanDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyPanDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002330 /* MaplyPinchDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyPinchDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyPinchDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002340 /* MaplyRotateDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyRotateDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyRotateDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002350 /* MaplyTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002360 /* MaplyTapMessage.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTapMessage.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTapMessage.mm"; sourceTree = "<group>"; };
+		46EB2E00002370 /* MaplyTouchCancelAnimationDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTouchCancelAnimationDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTouchCancelAnimationDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002380 /* MaplyTwoFingerTapDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTwoFingerTapDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyTwoFingerTapDelegate.mm"; sourceTree = "<group>"; };
+		46EB2E00002390 /* MaplyZoomGestureDelegate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyZoomGestureDelegate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/gestures/MaplyZoomGestureDelegate.mm"; sourceTree = "<group>"; };
 		46EB2E000023A0 /* MaplyColorRampGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyColorRampGenerator.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyColorRampGenerator.m"; sourceTree = "<group>"; };
-		46EB2E000023B0 /* MaplyGeomBuilder.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyGeomBuilder.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyGeomBuilder.mm"; sourceTree = "<group>"; };
-		46EB2E000023C0 /* MaplyIconManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyIconManager.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyIconManager.mm"; sourceTree = "<group>"; };
-		46EB2E000023D0 /* MaplyLocationTracker.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyLocationTracker.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyLocationTracker.mm"; sourceTree = "<group>"; };
-		46EB2E000023E0 /* MaplyQuadSampler.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyQuadSampler.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyQuadSampler.mm"; sourceTree = "<group>"; };
-		46EB2E000023F0 /* MaplyTextureBuilder.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTextureBuilder.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyTextureBuilder.mm"; sourceTree = "<group>"; };
-		46EB2E00002400 /* sqlhelpers.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = sqlhelpers.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/sqlhelpers.mm"; sourceTree = "<group>"; };
-		46EB2E00002410 /* MaplyImageTile.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyImageTile.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyImageTile.mm"; sourceTree = "<group>"; };
-		46EB2E00002420 /* MaplyQuadImageFrameLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyQuadImageFrameLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadImageFrameLoader.mm"; sourceTree = "<group>"; };
-		46EB2E00002430 /* MaplyQuadImageLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyQuadImageLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadImageLoader.mm"; sourceTree = "<group>"; };
-		46EB2E00002440 /* MaplyQuadLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyQuadLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadLoader.mm"; sourceTree = "<group>"; };
-		46EB2E00002450 /* MaplyQuadPagingLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyQuadPagingLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadPagingLoader.mm"; sourceTree = "<group>"; };
-		46EB2E00002460 /* MaplyRemoteTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyRemoteTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyRemoteTileFetcher.mm"; sourceTree = "<group>"; };
-		46EB2E00002470 /* MaplySimpleTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplySimpleTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplySimpleTileFetcher.mm"; sourceTree = "<group>"; };
-		46EB2E00002480 /* MaplyTileSourceNew.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTileSourceNew.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyTileSourceNew.mm"; sourceTree = "<group>"; };
-		46EB2E00002490 /* MaplyCoordinate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyCoordinate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyCoordinate.mm"; sourceTree = "<group>"; };
-		46EB2E000024A0 /* MaplyCoordinateSystem.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyCoordinateSystem.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyCoordinateSystem.mm"; sourceTree = "<group>"; };
-		46EB2E000024B0 /* MaplyMatrix.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyMatrix.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyMatrix.mm"; sourceTree = "<group>"; };
-		46EB2E000024C0 /* WGCoordinate.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = WGCoordinate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/WGCoordinate.mm"; sourceTree = "<group>"; };
-		46EB2E000024D0 /* MaplyAtmosphere.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyAtmosphere.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyAtmosphere.mm"; sourceTree = "<group>"; };
-		46EB2E000024E0 /* MaplyRenderTarget.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyRenderTarget.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyRenderTarget.mm"; sourceTree = "<group>"; };
-		46EB2E000024F0 /* MaplyShader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyShader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyShader.mm"; sourceTree = "<group>"; };
-		46EB2E00002500 /* MaplyTextureAtlas.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTextureAtlas.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyTextureAtlas.mm"; sourceTree = "<group>"; };
-		46EB2E00002510 /* MaplyVariableTarget.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVariableTarget.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyVariableTarget.mm"; sourceTree = "<group>"; };
-		46EB2E00002520 /* ViewPlacementActiveModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ViewPlacementActiveModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/ViewPlacementActiveModel.mm"; sourceTree = "<group>"; };
+		46EB2E000023B0 /* MaplyGeomBuilder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyGeomBuilder.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyGeomBuilder.mm"; sourceTree = "<group>"; };
+		46EB2E000023C0 /* MaplyIconManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyIconManager.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyIconManager.mm"; sourceTree = "<group>"; };
+		46EB2E000023D0 /* MaplyLocationTracker.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyLocationTracker.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyLocationTracker.mm"; sourceTree = "<group>"; };
+		46EB2E000023E0 /* MaplyQuadSampler.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyQuadSampler.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyQuadSampler.mm"; sourceTree = "<group>"; };
+		46EB2E000023F0 /* MaplyTextureBuilder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTextureBuilder.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/MaplyTextureBuilder.mm"; sourceTree = "<group>"; };
+		46EB2E00002400 /* sqlhelpers.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = sqlhelpers.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/helpers/sqlhelpers.mm"; sourceTree = "<group>"; };
+		46EB2E00002410 /* MaplyImageTile.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyImageTile.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyImageTile.mm"; sourceTree = "<group>"; };
+		46EB2E00002420 /* MaplyQuadImageFrameLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyQuadImageFrameLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadImageFrameLoader.mm"; sourceTree = "<group>"; };
+		46EB2E00002430 /* MaplyQuadImageLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyQuadImageLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadImageLoader.mm"; sourceTree = "<group>"; };
+		46EB2E00002440 /* MaplyQuadLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyQuadLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadLoader.mm"; sourceTree = "<group>"; };
+		46EB2E00002450 /* MaplyQuadPagingLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyQuadPagingLoader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyQuadPagingLoader.mm"; sourceTree = "<group>"; };
+		46EB2E00002460 /* MaplyRemoteTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyRemoteTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyRemoteTileFetcher.mm"; sourceTree = "<group>"; };
+		46EB2E00002470 /* MaplySimpleTileFetcher.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplySimpleTileFetcher.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplySimpleTileFetcher.mm"; sourceTree = "<group>"; };
+		46EB2E00002480 /* MaplyTileSourceNew.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTileSourceNew.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/loading/MaplyTileSourceNew.mm"; sourceTree = "<group>"; };
+		46EB2E00002490 /* MaplyCoordinate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyCoordinate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyCoordinate.mm"; sourceTree = "<group>"; };
+		46EB2E000024A0 /* MaplyCoordinateSystem.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyCoordinateSystem.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyCoordinateSystem.mm"; sourceTree = "<group>"; };
+		46EB2E000024B0 /* MaplyMatrix.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyMatrix.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/MaplyMatrix.mm"; sourceTree = "<group>"; };
+		46EB2E000024C0 /* WGCoordinate.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = WGCoordinate.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/math/WGCoordinate.mm"; sourceTree = "<group>"; };
+		46EB2E000024D0 /* MaplyAtmosphere.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyAtmosphere.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyAtmosphere.mm"; sourceTree = "<group>"; };
+		46EB2E000024E0 /* MaplyRenderTarget.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyRenderTarget.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyRenderTarget.mm"; sourceTree = "<group>"; };
+		46EB2E000024F0 /* MaplyShader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyShader.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyShader.mm"; sourceTree = "<group>"; };
+		46EB2E00002500 /* MaplyTextureAtlas.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTextureAtlas.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyTextureAtlas.mm"; sourceTree = "<group>"; };
+		46EB2E00002510 /* MaplyVariableTarget.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVariableTarget.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/MaplyVariableTarget.mm"; sourceTree = "<group>"; };
+		46EB2E00002520 /* ViewPlacementActiveModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewPlacementActiveModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/rendering/ViewPlacementActiveModel.mm"; sourceTree = "<group>"; };
 		46EB2E00002530 /* NSData+Zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+Zlib.m"; path = "ios/library/WhirlyGlobe-MaplyComponent/src/UIKit/NSData+Zlib.m"; sourceTree = "<group>"; };
 		46EB2E00002540 /* NSDictionary+StyleRules.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+StyleRules.m"; path = "ios/library/WhirlyGlobe-MaplyComponent/src/UIKit/NSDictionary+StyleRules.m"; sourceTree = "<group>"; };
-		46EB2E00002550 /* GeoJSONSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GeoJSONSource.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/GeoJSONSource.mm"; sourceTree = "<group>"; };
-		46EB2E00002560 /* MapboxVectorInterpreter.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MapboxVectorInterpreter.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorInterpreter.mm"; sourceTree = "<group>"; };
-		46EB2E00002570 /* MapboxVectorStyleSet.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MapboxVectorStyleSet.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorStyleSet.mm"; sourceTree = "<group>"; };
-		46EB2E00002580 /* MapboxVectorTiles.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MapboxVectorTiles.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorTiles.mm"; sourceTree = "<group>"; };
-		46EB2E00002590 /* MaplyVectorStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorStyle.mm"; sourceTree = "<group>"; };
+		46EB2E00002550 /* GeoJSONSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GeoJSONSource.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/GeoJSONSource.mm"; sourceTree = "<group>"; };
+		46EB2E00002560 /* MapboxVectorInterpreter.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MapboxVectorInterpreter.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorInterpreter.mm"; sourceTree = "<group>"; };
+		46EB2E00002570 /* MapboxVectorStyleSet.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MapboxVectorStyleSet.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorStyleSet.mm"; sourceTree = "<group>"; };
+		46EB2E00002580 /* MapboxVectorTiles.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MapboxVectorTiles.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapboxVectorTiles.mm"; sourceTree = "<group>"; };
+		46EB2E00002590 /* MaplyVectorStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorStyle.mm"; sourceTree = "<group>"; };
 		46EB2E000025A0 /* MaplyVectorStyleSimple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyVectorStyleSimple.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorStyleSimple.m"; sourceTree = "<group>"; };
-		46EB2E000025B0 /* MaplyVectorTileLineStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorTileLineStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileLineStyle.mm"; sourceTree = "<group>"; };
-		46EB2E000025C0 /* MaplyVectorTileMarkerStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorTileMarkerStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileMarkerStyle.mm"; sourceTree = "<group>"; };
-		46EB2E000025D0 /* MaplyVectorTilePolygonStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorTilePolygonStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTilePolygonStyle.mm"; sourceTree = "<group>"; };
-		46EB2E000025E0 /* MaplyVectorTileStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorTileStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileStyle.mm"; sourceTree = "<group>"; };
-		46EB2E000025F0 /* MaplyVectorTileTextStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorTileTextStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileTextStyle.mm"; sourceTree = "<group>"; };
+		46EB2E000025B0 /* MaplyVectorTileLineStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorTileLineStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileLineStyle.mm"; sourceTree = "<group>"; };
+		46EB2E000025C0 /* MaplyVectorTileMarkerStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorTileMarkerStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileMarkerStyle.mm"; sourceTree = "<group>"; };
+		46EB2E000025D0 /* MaplyVectorTilePolygonStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorTilePolygonStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTilePolygonStyle.mm"; sourceTree = "<group>"; };
+		46EB2E000025E0 /* MaplyVectorTileStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorTileStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileStyle.mm"; sourceTree = "<group>"; };
+		46EB2E000025F0 /* MaplyVectorTileTextStyle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorTileTextStyle.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MaplyVectorTileTextStyle.mm"; sourceTree = "<group>"; };
 		46EB2E00002600 /* MapnikStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MapnikStyle.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapnikStyle.m"; sourceTree = "<group>"; };
 		46EB2E00002610 /* MapnikStyleRule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MapnikStyleRule.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapnikStyleRule.m"; sourceTree = "<group>"; };
 		46EB2E00002620 /* MapnikStyleSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MapnikStyleSet.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/MapnikStyleSet.m"; sourceTree = "<group>"; };
@@ -1840,49 +1839,49 @@
 		46EB2E00002650 /* SLDStyleSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLDStyleSet.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/SLDStyleSet.m"; sourceTree = "<group>"; };
 		46EB2E00002660 /* SLDSymbolizers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLDSymbolizers.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/SLDSymbolizers.m"; sourceTree = "<group>"; };
 		46EB2E00002670 /* SLDWellKnownMarkers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLDWellKnownMarkers.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/vector_tiles/SLDWellKnownMarkers.m"; sourceTree = "<group>"; };
-		46EB2E00002680 /* MaplyBillboard.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyBillboard.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyBillboard.mm"; sourceTree = "<group>"; };
-		46EB2E00002690 /* MaplyComponentObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyComponentObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyComponentObject.mm"; sourceTree = "<group>"; };
-		46EB2E000026A0 /* MaplyGeomModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyGeomModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyGeomModel.mm"; sourceTree = "<group>"; };
+		46EB2E00002680 /* MaplyBillboard.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyBillboard.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyBillboard.mm"; sourceTree = "<group>"; };
+		46EB2E00002690 /* MaplyComponentObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyComponentObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyComponentObject.mm"; sourceTree = "<group>"; };
+		46EB2E000026A0 /* MaplyGeomModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyGeomModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyGeomModel.mm"; sourceTree = "<group>"; };
 		46EB2E000026B0 /* MaplyLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyLabel.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyLabel.m"; sourceTree = "<group>"; };
 		46EB2E000026C0 /* MaplyLight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyLight.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyLight.m"; sourceTree = "<group>"; };
 		46EB2E000026D0 /* MaplyMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyMarker.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyMarker.m"; sourceTree = "<group>"; };
-		46EB2E000026E0 /* MaplyMoon.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyMoon.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyMoon.mm"; sourceTree = "<group>"; };
-		46EB2E000026F0 /* MaplyParticleSystem.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyParticleSystem.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyParticleSystem.mm"; sourceTree = "<group>"; };
-		46EB2E00002700 /* MaplyPoints.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyPoints.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyPoints.mm"; sourceTree = "<group>"; };
+		46EB2E000026E0 /* MaplyMoon.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyMoon.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyMoon.mm"; sourceTree = "<group>"; };
+		46EB2E000026F0 /* MaplyParticleSystem.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyParticleSystem.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyParticleSystem.mm"; sourceTree = "<group>"; };
+		46EB2E00002700 /* MaplyPoints.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyPoints.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyPoints.mm"; sourceTree = "<group>"; };
 		46EB2E00002710 /* MaplyScreenLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyScreenLabel.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyScreenLabel.m"; sourceTree = "<group>"; };
 		46EB2E00002720 /* MaplyScreenMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaplyScreenMarker.m; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyScreenMarker.m"; sourceTree = "<group>"; };
-		46EB2E00002730 /* MaplyScreenObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyScreenObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyScreenObject.mm"; sourceTree = "<group>"; };
-		46EB2E00002740 /* MaplyShape.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyShape.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyShape.mm"; sourceTree = "<group>"; };
-		46EB2E00002750 /* MaplyStarsModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyStarsModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyStarsModel.mm"; sourceTree = "<group>"; };
-		46EB2E00002760 /* MaplySticker.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplySticker.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplySticker.mm"; sourceTree = "<group>"; };
-		46EB2E00002770 /* MaplySun.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplySun.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplySun.mm"; sourceTree = "<group>"; };
-		46EB2E00002780 /* MaplyTexture.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyTexture.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyTexture.mm"; sourceTree = "<group>"; };
-		46EB2E00002790 /* MaplyVectorObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVectorObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyVectorObject.mm"; sourceTree = "<group>"; };
-		46EB2E000027A0 /* MaplyVertexAttribute.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MaplyVertexAttribute.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyVertexAttribute.mm"; sourceTree = "<group>"; };
+		46EB2E00002730 /* MaplyScreenObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyScreenObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyScreenObject.mm"; sourceTree = "<group>"; };
+		46EB2E00002740 /* MaplyShape.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyShape.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyShape.mm"; sourceTree = "<group>"; };
+		46EB2E00002750 /* MaplyStarsModel.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyStarsModel.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyStarsModel.mm"; sourceTree = "<group>"; };
+		46EB2E00002760 /* MaplySticker.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplySticker.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplySticker.mm"; sourceTree = "<group>"; };
+		46EB2E00002770 /* MaplySun.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplySun.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplySun.mm"; sourceTree = "<group>"; };
+		46EB2E00002780 /* MaplyTexture.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyTexture.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyTexture.mm"; sourceTree = "<group>"; };
+		46EB2E00002790 /* MaplyVectorObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVectorObject.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyVectorObject.mm"; sourceTree = "<group>"; };
+		46EB2E000027A0 /* MaplyVertexAttribute.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MaplyVertexAttribute.mm; path = "ios/library/WhirlyGlobe-MaplyComponent/src/visual_objects/MaplyVertexAttribute.mm"; sourceTree = "<group>"; };
 		46EB2E000027C0 /* SDL_opengles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDL_opengles.h; path = common/local_libs/glues/include/SDL/SDL_opengles.h; sourceTree = "<group>"; };
 		46EB2E000027D0 /* glues.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = glues.h; path = common/local_libs/glues/source/glues.h; sourceTree = "<group>"; };
 		46EB2E000027E0 /* dict-list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "dict-list.h"; path = "common/local_libs/glues/source/libtess/dict-list.h"; sourceTree = "<group>"; };
-		46EB2E000027F0 /* dict.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dict.c; path = common/local_libs/glues/source/libtess/dict.c; sourceTree = "<group>"; };
+		46EB2E000027F0 /* dict.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = dict.c; path = common/local_libs/glues/source/libtess/dict.c; sourceTree = "<group>"; };
 		46EB2E00002800 /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = common/local_libs/glues/source/libtess/dict.h; sourceTree = "<group>"; };
-		46EB2E00002810 /* geom.c */ = {isa = PBXFileReference; includeInIndex = 1; name = geom.c; path = common/local_libs/glues/source/libtess/geom.c; sourceTree = "<group>"; };
+		46EB2E00002810 /* geom.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = geom.c; path = common/local_libs/glues/source/libtess/geom.c; sourceTree = "<group>"; };
 		46EB2E00002820 /* geom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = geom.h; path = common/local_libs/glues/source/libtess/geom.h; sourceTree = "<group>"; };
-		46EB2E00002830 /* memalloc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = memalloc.c; path = common/local_libs/glues/source/libtess/memalloc.c; sourceTree = "<group>"; };
+		46EB2E00002830 /* memalloc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = memalloc.c; path = common/local_libs/glues/source/libtess/memalloc.c; sourceTree = "<group>"; };
 		46EB2E00002840 /* memalloc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = memalloc.h; path = common/local_libs/glues/source/libtess/memalloc.h; sourceTree = "<group>"; };
-		46EB2E00002850 /* mesh.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mesh.c; path = common/local_libs/glues/source/libtess/mesh.c; sourceTree = "<group>"; };
+		46EB2E00002850 /* mesh.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mesh.c; path = common/local_libs/glues/source/libtess/mesh.c; sourceTree = "<group>"; };
 		46EB2E00002860 /* mesh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mesh.h; path = common/local_libs/glues/source/libtess/mesh.h; sourceTree = "<group>"; };
-		46EB2E00002870 /* normal.c */ = {isa = PBXFileReference; includeInIndex = 1; name = normal.c; path = common/local_libs/glues/source/libtess/normal.c; sourceTree = "<group>"; };
+		46EB2E00002870 /* normal.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = normal.c; path = common/local_libs/glues/source/libtess/normal.c; sourceTree = "<group>"; };
 		46EB2E00002880 /* normal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = normal.h; path = common/local_libs/glues/source/libtess/normal.h; sourceTree = "<group>"; };
 		46EB2E00002890 /* priorityq-heap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "priorityq-heap.h"; path = "common/local_libs/glues/source/libtess/priorityq-heap.h"; sourceTree = "<group>"; };
 		46EB2E000028A0 /* priorityq-sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "priorityq-sort.h"; path = "common/local_libs/glues/source/libtess/priorityq-sort.h"; sourceTree = "<group>"; };
-		46EB2E000028B0 /* priorityq.c */ = {isa = PBXFileReference; includeInIndex = 1; name = priorityq.c; path = common/local_libs/glues/source/libtess/priorityq.c; sourceTree = "<group>"; };
+		46EB2E000028B0 /* priorityq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = priorityq.c; path = common/local_libs/glues/source/libtess/priorityq.c; sourceTree = "<group>"; };
 		46EB2E000028C0 /* priorityq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = priorityq.h; path = common/local_libs/glues/source/libtess/priorityq.h; sourceTree = "<group>"; };
-		46EB2E000028D0 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; name = render.c; path = common/local_libs/glues/source/libtess/render.c; sourceTree = "<group>"; };
+		46EB2E000028D0 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = render.c; path = common/local_libs/glues/source/libtess/render.c; sourceTree = "<group>"; };
 		46EB2E000028E0 /* render.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = render.h; path = common/local_libs/glues/source/libtess/render.h; sourceTree = "<group>"; };
-		46EB2E000028F0 /* sweep.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sweep.c; path = common/local_libs/glues/source/libtess/sweep.c; sourceTree = "<group>"; };
+		46EB2E000028F0 /* sweep.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sweep.c; path = common/local_libs/glues/source/libtess/sweep.c; sourceTree = "<group>"; };
 		46EB2E00002900 /* sweep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sweep.h; path = common/local_libs/glues/source/libtess/sweep.h; sourceTree = "<group>"; };
-		46EB2E00002910 /* tess.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tess.c; path = common/local_libs/glues/source/libtess/tess.c; sourceTree = "<group>"; };
+		46EB2E00002910 /* tess.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tess.c; path = common/local_libs/glues/source/libtess/tess.c; sourceTree = "<group>"; };
 		46EB2E00002920 /* tess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tess.h; path = common/local_libs/glues/source/libtess/tess.h; sourceTree = "<group>"; };
-		46EB2E00002930 /* tessmono.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tessmono.c; path = common/local_libs/glues/source/libtess/tessmono.c; sourceTree = "<group>"; };
+		46EB2E00002930 /* tessmono.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tessmono.c; path = common/local_libs/glues/source/libtess/tessmono.c; sourceTree = "<group>"; };
 		46EB2E00002940 /* tessmono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tessmono.h; path = common/local_libs/glues/source/libtess/tessmono.h; sourceTree = "<group>"; };
 		46EB2E00002960 /* AA+.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AA+.h"; path = "common/local_libs/aaplus/AA+.h"; sourceTree = "<group>"; };
 		46EB2E00002970 /* AA2DCoordinate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AA2DCoordinate.h; path = common/local_libs/aaplus/AA2DCoordinate.h; sourceTree = "<group>"; };
@@ -2004,17 +2003,17 @@
 		46EB2E000030B0 /* stdafx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = common/local_libs/aaplus/stdafx.h; sourceTree = "<group>"; };
 		46EB2E000030C0 /* clipper.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = clipper.cpp; path = common/local_libs/clipper/cpp/clipper.cpp; sourceTree = "<group>"; };
 		46EB2E000030D0 /* clipper.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = clipper.hpp; path = common/local_libs/clipper/cpp/clipper.hpp; sourceTree = "<group>"; };
-		46EB2E000030E0 /* dbfopen.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dbfopen.c; path = common/local_libs/shapefile/dbfopen.c; sourceTree = "<group>"; };
-		46EB2E000030F0 /* safileio.c */ = {isa = PBXFileReference; includeInIndex = 1; name = safileio.c; path = common/local_libs/shapefile/safileio.c; sourceTree = "<group>"; };
+		46EB2E000030E0 /* dbfopen.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = dbfopen.c; path = common/local_libs/shapefile/dbfopen.c; sourceTree = "<group>"; };
+		46EB2E000030F0 /* safileio.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = safileio.c; path = common/local_libs/shapefile/safileio.c; sourceTree = "<group>"; };
 		46EB2E00003100 /* shapefil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = shapefil.h; path = common/local_libs/shapefile/shapefil.h; sourceTree = "<group>"; };
-		46EB2E00003110 /* shpopen.c */ = {isa = PBXFileReference; includeInIndex = 1; name = shpopen.c; path = common/local_libs/shapefile/shpopen.c; sourceTree = "<group>"; };
-		46EB2E00003120 /* shptree.c */ = {isa = PBXFileReference; includeInIndex = 1; name = shptree.c; path = common/local_libs/shapefile/shptree.c; sourceTree = "<group>"; };
+		46EB2E00003110 /* shpopen.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = shpopen.c; path = common/local_libs/shapefile/shpopen.c; sourceTree = "<group>"; };
+		46EB2E00003120 /* shptree.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = shptree.c; path = common/local_libs/shapefile/shptree.c; sourceTree = "<group>"; };
 		46EB2E00003130 /* lodepng.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = lodepng.cpp; path = common/local_libs/lodepng/lodepng.cpp; sourceTree = "<group>"; };
 		46EB2E00003140 /* lodepng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lodepng.h; path = common/local_libs/lodepng/lodepng.h; sourceTree = "<group>"; };
 		46EB2E00003150 /* maply_pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = maply_pb.h; path = common/local_libs/nanopb/maply_pb.h; sourceTree = "<group>"; };
-		46EB2E00003160 /* maply_pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; name = maply_pb_common.c; path = common/local_libs/nanopb/maply_pb_common.c; sourceTree = "<group>"; };
+		46EB2E00003160 /* maply_pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = maply_pb_common.c; path = common/local_libs/nanopb/maply_pb_common.c; sourceTree = "<group>"; };
 		46EB2E00003170 /* maply_pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = maply_pb_common.h; path = common/local_libs/nanopb/maply_pb_common.h; sourceTree = "<group>"; };
-		46EB2E00003180 /* maply_pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = maply_pb_decode.c; path = common/local_libs/nanopb/maply_pb_decode.c; sourceTree = "<group>"; };
+		46EB2E00003180 /* maply_pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = maply_pb_decode.c; path = common/local_libs/nanopb/maply_pb_decode.c; sourceTree = "<group>"; };
 		46EB2E00003190 /* maply_pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = maply_pb_decode.h; path = common/local_libs/nanopb/maply_pb_decode.h; sourceTree = "<group>"; };
 		46EB2E000031A0 /* maply_pb_names.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = maply_pb_names.h; path = common/local_libs/nanopb/maply_pb_names.h; sourceTree = "<group>"; };
 		46EB2E000031B0 /* Accumulator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = Accumulator.cpp; path = common/local_libs/GeographicLib/src/Accumulator.cpp; sourceTree = "<group>"; };
@@ -2095,171 +2094,171 @@
 		46EB2E00003660 /* JSON_Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSON_Base64.h; path = libjson/_internal/Source/JSON_Base64.h; sourceTree = "<group>"; };
 		46EB2E00003670 /* libjson.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = libjson.cpp; path = libjson/_internal/Source/libjson.cpp; sourceTree = "<group>"; };
 		46EB2E00003680 /* NumberToString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NumberToString.h; path = libjson/_internal/Source/NumberToString.h; sourceTree = "<group>"; };
-		46EB2E00003690 /* aasincos.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aasincos.c; path = proj/src/aasincos.c; sourceTree = "<group>"; };
-		46EB2E000036A0 /* adjlon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = adjlon.c; path = proj/src/adjlon.c; sourceTree = "<group>"; };
-		46EB2E000036B0 /* bch2bps.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bch2bps.c; path = proj/src/bch2bps.c; sourceTree = "<group>"; };
-		46EB2E000036C0 /* bchgen.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bchgen.c; path = proj/src/bchgen.c; sourceTree = "<group>"; };
-		46EB2E000036D0 /* biveval.c */ = {isa = PBXFileReference; includeInIndex = 1; name = biveval.c; path = proj/src/biveval.c; sourceTree = "<group>"; };
-		46EB2E000036E0 /* dmstor.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dmstor.c; path = proj/src/dmstor.c; sourceTree = "<group>"; };
-		46EB2E000036F0 /* emess.c */ = {isa = PBXFileReference; includeInIndex = 1; name = emess.c; path = proj/src/emess.c; sourceTree = "<group>"; };
+		46EB2E00003690 /* aasincos.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aasincos.c; path = proj/src/aasincos.c; sourceTree = "<group>"; };
+		46EB2E000036A0 /* adjlon.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = adjlon.c; path = proj/src/adjlon.c; sourceTree = "<group>"; };
+		46EB2E000036B0 /* bch2bps.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bch2bps.c; path = proj/src/bch2bps.c; sourceTree = "<group>"; };
+		46EB2E000036C0 /* bchgen.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bchgen.c; path = proj/src/bchgen.c; sourceTree = "<group>"; };
+		46EB2E000036D0 /* biveval.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = biveval.c; path = proj/src/biveval.c; sourceTree = "<group>"; };
+		46EB2E000036E0 /* dmstor.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = dmstor.c; path = proj/src/dmstor.c; sourceTree = "<group>"; };
+		46EB2E000036F0 /* emess.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = emess.c; path = proj/src/emess.c; sourceTree = "<group>"; };
 		46EB2E00003700 /* emess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emess.h; path = proj/src/emess.h; sourceTree = "<group>"; };
-		46EB2E00003710 /* gen_cheb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = gen_cheb.c; path = proj/src/gen_cheb.c; sourceTree = "<group>"; };
-		46EB2E00003720 /* geocent.c */ = {isa = PBXFileReference; includeInIndex = 1; name = geocent.c; path = proj/src/geocent.c; sourceTree = "<group>"; };
+		46EB2E00003710 /* gen_cheb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = gen_cheb.c; path = proj/src/gen_cheb.c; sourceTree = "<group>"; };
+		46EB2E00003720 /* geocent.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = geocent.c; path = proj/src/geocent.c; sourceTree = "<group>"; };
 		46EB2E00003730 /* geocent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = geocent.h; path = proj/src/geocent.h; sourceTree = "<group>"; };
 		46EB2E00003740 /* geodesic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = geodesic.h; path = proj/src/geodesic.h; sourceTree = "<group>"; };
-		46EB2E00003750 /* geod_for.c */ = {isa = PBXFileReference; includeInIndex = 1; name = geod_for.c; path = proj/src/geod_for.c; sourceTree = "<group>"; };
-		46EB2E00003760 /* geod_inv.c */ = {isa = PBXFileReference; includeInIndex = 1; name = geod_inv.c; path = proj/src/geod_inv.c; sourceTree = "<group>"; };
-		46EB2E00003770 /* geod_set.c */ = {isa = PBXFileReference; includeInIndex = 1; name = geod_set.c; path = proj/src/geod_set.c; sourceTree = "<group>"; };
-		46EB2E00003780 /* hypot.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hypot.c; path = proj/src/hypot.c; sourceTree = "<group>"; };
-		46EB2E00003790 /* jniproj.c */ = {isa = PBXFileReference; includeInIndex = 1; name = jniproj.c; path = proj/src/jniproj.c; sourceTree = "<group>"; };
-		46EB2E000037A0 /* mk_cheby.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mk_cheby.c; path = proj/src/mk_cheby.c; sourceTree = "<group>"; };
-		46EB2E000037B0 /* nad_cvt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = nad_cvt.c; path = proj/src/nad_cvt.c; sourceTree = "<group>"; };
-		46EB2E000037C0 /* nad_init.c */ = {isa = PBXFileReference; includeInIndex = 1; name = nad_init.c; path = proj/src/nad_init.c; sourceTree = "<group>"; };
-		46EB2E000037D0 /* nad_intr.c */ = {isa = PBXFileReference; includeInIndex = 1; name = nad_intr.c; path = proj/src/nad_intr.c; sourceTree = "<group>"; };
+		46EB2E00003750 /* geod_for.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = geod_for.c; path = proj/src/geod_for.c; sourceTree = "<group>"; };
+		46EB2E00003760 /* geod_inv.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = geod_inv.c; path = proj/src/geod_inv.c; sourceTree = "<group>"; };
+		46EB2E00003770 /* geod_set.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = geod_set.c; path = proj/src/geod_set.c; sourceTree = "<group>"; };
+		46EB2E00003780 /* hypot.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = hypot.c; path = proj/src/hypot.c; sourceTree = "<group>"; };
+		46EB2E00003790 /* jniproj.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = jniproj.c; path = proj/src/jniproj.c; sourceTree = "<group>"; };
+		46EB2E000037A0 /* mk_cheby.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mk_cheby.c; path = proj/src/mk_cheby.c; sourceTree = "<group>"; };
+		46EB2E000037B0 /* nad_cvt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = nad_cvt.c; path = proj/src/nad_cvt.c; sourceTree = "<group>"; };
+		46EB2E000037C0 /* nad_init.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = nad_init.c; path = proj/src/nad_init.c; sourceTree = "<group>"; };
+		46EB2E000037D0 /* nad_intr.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = nad_intr.c; path = proj/src/nad_intr.c; sourceTree = "<group>"; };
 		46EB2E000037E0 /* nad_list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nad_list.h; path = proj/src/nad_list.h; sourceTree = "<group>"; };
 		46EB2E000037F0 /* org_proj4_PJ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = org_proj4_PJ.h; path = proj/src/org_proj4_PJ.h; sourceTree = "<group>"; };
 		46EB2E00003800 /* org_proj4_Projections.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = org_proj4_Projections.h; path = proj/src/org_proj4_Projections.h; sourceTree = "<group>"; };
-		46EB2E00003810 /* PJ_aea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_aea.c; path = proj/src/PJ_aea.c; sourceTree = "<group>"; };
-		46EB2E00003820 /* PJ_aeqd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_aeqd.c; path = proj/src/PJ_aeqd.c; sourceTree = "<group>"; };
-		46EB2E00003830 /* PJ_airy.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_airy.c; path = proj/src/PJ_airy.c; sourceTree = "<group>"; };
-		46EB2E00003840 /* PJ_aitoff.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_aitoff.c; path = proj/src/PJ_aitoff.c; sourceTree = "<group>"; };
-		46EB2E00003850 /* pj_apply_gridshift.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_apply_gridshift.c; path = proj/src/pj_apply_gridshift.c; sourceTree = "<group>"; };
-		46EB2E00003860 /* pj_apply_vgridshift.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_apply_vgridshift.c; path = proj/src/pj_apply_vgridshift.c; sourceTree = "<group>"; };
-		46EB2E00003870 /* PJ_august.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_august.c; path = proj/src/PJ_august.c; sourceTree = "<group>"; };
-		46EB2E00003880 /* pj_auth.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_auth.c; path = proj/src/pj_auth.c; sourceTree = "<group>"; };
-		46EB2E00003890 /* PJ_bacon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_bacon.c; path = proj/src/PJ_bacon.c; sourceTree = "<group>"; };
-		46EB2E000038A0 /* PJ_bipc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_bipc.c; path = proj/src/PJ_bipc.c; sourceTree = "<group>"; };
-		46EB2E000038B0 /* PJ_boggs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_boggs.c; path = proj/src/PJ_boggs.c; sourceTree = "<group>"; };
-		46EB2E000038C0 /* PJ_bonne.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_bonne.c; path = proj/src/PJ_bonne.c; sourceTree = "<group>"; };
-		46EB2E000038D0 /* PJ_cass.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_cass.c; path = proj/src/PJ_cass.c; sourceTree = "<group>"; };
-		46EB2E000038E0 /* PJ_cc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_cc.c; path = proj/src/PJ_cc.c; sourceTree = "<group>"; };
-		46EB2E000038F0 /* PJ_cea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_cea.c; path = proj/src/PJ_cea.c; sourceTree = "<group>"; };
-		46EB2E00003900 /* PJ_chamb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_chamb.c; path = proj/src/PJ_chamb.c; sourceTree = "<group>"; };
-		46EB2E00003910 /* PJ_collg.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_collg.c; path = proj/src/PJ_collg.c; sourceTree = "<group>"; };
-		46EB2E00003920 /* PJ_crast.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_crast.c; path = proj/src/PJ_crast.c; sourceTree = "<group>"; };
-		46EB2E00003930 /* pj_ctx.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_ctx.c; path = proj/src/pj_ctx.c; sourceTree = "<group>"; };
-		46EB2E00003940 /* pj_datums.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_datums.c; path = proj/src/pj_datums.c; sourceTree = "<group>"; };
-		46EB2E00003950 /* pj_datum_set.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_datum_set.c; path = proj/src/pj_datum_set.c; sourceTree = "<group>"; };
-		46EB2E00003960 /* PJ_denoy.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_denoy.c; path = proj/src/PJ_denoy.c; sourceTree = "<group>"; };
-		46EB2E00003970 /* pj_deriv.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_deriv.c; path = proj/src/pj_deriv.c; sourceTree = "<group>"; };
-		46EB2E00003980 /* PJ_eck1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eck1.c; path = proj/src/PJ_eck1.c; sourceTree = "<group>"; };
-		46EB2E00003990 /* PJ_eck2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eck2.c; path = proj/src/PJ_eck2.c; sourceTree = "<group>"; };
-		46EB2E000039A0 /* PJ_eck3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eck3.c; path = proj/src/PJ_eck3.c; sourceTree = "<group>"; };
-		46EB2E000039B0 /* PJ_eck4.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eck4.c; path = proj/src/PJ_eck4.c; sourceTree = "<group>"; };
-		46EB2E000039C0 /* PJ_eck5.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eck5.c; path = proj/src/PJ_eck5.c; sourceTree = "<group>"; };
-		46EB2E000039D0 /* pj_ellps.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_ellps.c; path = proj/src/pj_ellps.c; sourceTree = "<group>"; };
-		46EB2E000039E0 /* pj_ell_set.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_ell_set.c; path = proj/src/pj_ell_set.c; sourceTree = "<group>"; };
-		46EB2E000039F0 /* PJ_eqc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eqc.c; path = proj/src/PJ_eqc.c; sourceTree = "<group>"; };
-		46EB2E00003A00 /* PJ_eqdc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_eqdc.c; path = proj/src/PJ_eqdc.c; sourceTree = "<group>"; };
-		46EB2E00003A10 /* pj_errno.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_errno.c; path = proj/src/pj_errno.c; sourceTree = "<group>"; };
-		46EB2E00003A20 /* pj_factors.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_factors.c; path = proj/src/pj_factors.c; sourceTree = "<group>"; };
-		46EB2E00003A30 /* PJ_fahey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_fahey.c; path = proj/src/PJ_fahey.c; sourceTree = "<group>"; };
-		46EB2E00003A40 /* PJ_fouc_s.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_fouc_s.c; path = proj/src/PJ_fouc_s.c; sourceTree = "<group>"; };
-		46EB2E00003A50 /* pj_fwd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_fwd.c; path = proj/src/pj_fwd.c; sourceTree = "<group>"; };
-		46EB2E00003A60 /* PJ_gall.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_gall.c; path = proj/src/PJ_gall.c; sourceTree = "<group>"; };
-		46EB2E00003A70 /* pj_gauss.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_gauss.c; path = proj/src/pj_gauss.c; sourceTree = "<group>"; };
-		46EB2E00003A80 /* pj_geocent.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_geocent.c; path = proj/src/pj_geocent.c; sourceTree = "<group>"; };
-		46EB2E00003A90 /* PJ_geos.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_geos.c; path = proj/src/PJ_geos.c; sourceTree = "<group>"; };
-		46EB2E00003AA0 /* PJ_gins8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_gins8.c; path = proj/src/PJ_gins8.c; sourceTree = "<group>"; };
-		46EB2E00003AB0 /* PJ_gnom.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_gnom.c; path = proj/src/PJ_gnom.c; sourceTree = "<group>"; };
-		46EB2E00003AC0 /* PJ_gn_sinu.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_gn_sinu.c; path = proj/src/PJ_gn_sinu.c; sourceTree = "<group>"; };
-		46EB2E00003AD0 /* PJ_goode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_goode.c; path = proj/src/PJ_goode.c; sourceTree = "<group>"; };
-		46EB2E00003AE0 /* pj_gridinfo.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_gridinfo.c; path = proj/src/pj_gridinfo.c; sourceTree = "<group>"; };
-		46EB2E00003AF0 /* pj_gridlist.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_gridlist.c; path = proj/src/pj_gridlist.c; sourceTree = "<group>"; };
-		46EB2E00003B00 /* PJ_gstmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_gstmerc.c; path = proj/src/PJ_gstmerc.c; sourceTree = "<group>"; };
-		46EB2E00003B10 /* PJ_hammer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_hammer.c; path = proj/src/PJ_hammer.c; sourceTree = "<group>"; };
-		46EB2E00003B20 /* PJ_hatano.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_hatano.c; path = proj/src/PJ_hatano.c; sourceTree = "<group>"; };
-		46EB2E00003B30 /* PJ_healpix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_healpix.c; path = proj/src/PJ_healpix.c; sourceTree = "<group>"; };
-		46EB2E00003B40 /* PJ_igh.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_igh.c; path = proj/src/PJ_igh.c; sourceTree = "<group>"; };
-		46EB2E00003B50 /* PJ_imw_p.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_imw_p.c; path = proj/src/PJ_imw_p.c; sourceTree = "<group>"; };
-		46EB2E00003B60 /* pj_init.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_init.c; path = proj/src/pj_init.c; sourceTree = "<group>"; };
-		46EB2E00003B70 /* pj_initcache.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_initcache.c; path = proj/src/pj_initcache.c; sourceTree = "<group>"; };
-		46EB2E00003B80 /* pj_inv.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_inv.c; path = proj/src/pj_inv.c; sourceTree = "<group>"; };
-		46EB2E00003B90 /* PJ_isea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_isea.c; path = proj/src/PJ_isea.c; sourceTree = "<group>"; };
-		46EB2E00003BA0 /* PJ_krovak.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_krovak.c; path = proj/src/PJ_krovak.c; sourceTree = "<group>"; };
-		46EB2E00003BB0 /* PJ_labrd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_labrd.c; path = proj/src/PJ_labrd.c; sourceTree = "<group>"; };
-		46EB2E00003BC0 /* PJ_laea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_laea.c; path = proj/src/PJ_laea.c; sourceTree = "<group>"; };
-		46EB2E00003BD0 /* PJ_lagrng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_lagrng.c; path = proj/src/PJ_lagrng.c; sourceTree = "<group>"; };
-		46EB2E00003BE0 /* PJ_larr.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_larr.c; path = proj/src/PJ_larr.c; sourceTree = "<group>"; };
-		46EB2E00003BF0 /* PJ_lask.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_lask.c; path = proj/src/PJ_lask.c; sourceTree = "<group>"; };
-		46EB2E00003C00 /* pj_latlong.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_latlong.c; path = proj/src/pj_latlong.c; sourceTree = "<group>"; };
-		46EB2E00003C10 /* PJ_lcc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_lcc.c; path = proj/src/PJ_lcc.c; sourceTree = "<group>"; };
-		46EB2E00003C20 /* PJ_lcca.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_lcca.c; path = proj/src/PJ_lcca.c; sourceTree = "<group>"; };
-		46EB2E00003C30 /* pj_list.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_list.c; path = proj/src/pj_list.c; sourceTree = "<group>"; };
+		46EB2E00003810 /* PJ_aea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_aea.c; path = proj/src/PJ_aea.c; sourceTree = "<group>"; };
+		46EB2E00003820 /* PJ_aeqd.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_aeqd.c; path = proj/src/PJ_aeqd.c; sourceTree = "<group>"; };
+		46EB2E00003830 /* PJ_airy.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_airy.c; path = proj/src/PJ_airy.c; sourceTree = "<group>"; };
+		46EB2E00003840 /* PJ_aitoff.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_aitoff.c; path = proj/src/PJ_aitoff.c; sourceTree = "<group>"; };
+		46EB2E00003850 /* pj_apply_gridshift.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_apply_gridshift.c; path = proj/src/pj_apply_gridshift.c; sourceTree = "<group>"; };
+		46EB2E00003860 /* pj_apply_vgridshift.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_apply_vgridshift.c; path = proj/src/pj_apply_vgridshift.c; sourceTree = "<group>"; };
+		46EB2E00003870 /* PJ_august.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_august.c; path = proj/src/PJ_august.c; sourceTree = "<group>"; };
+		46EB2E00003880 /* pj_auth.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_auth.c; path = proj/src/pj_auth.c; sourceTree = "<group>"; };
+		46EB2E00003890 /* PJ_bacon.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_bacon.c; path = proj/src/PJ_bacon.c; sourceTree = "<group>"; };
+		46EB2E000038A0 /* PJ_bipc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_bipc.c; path = proj/src/PJ_bipc.c; sourceTree = "<group>"; };
+		46EB2E000038B0 /* PJ_boggs.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_boggs.c; path = proj/src/PJ_boggs.c; sourceTree = "<group>"; };
+		46EB2E000038C0 /* PJ_bonne.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_bonne.c; path = proj/src/PJ_bonne.c; sourceTree = "<group>"; };
+		46EB2E000038D0 /* PJ_cass.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_cass.c; path = proj/src/PJ_cass.c; sourceTree = "<group>"; };
+		46EB2E000038E0 /* PJ_cc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_cc.c; path = proj/src/PJ_cc.c; sourceTree = "<group>"; };
+		46EB2E000038F0 /* PJ_cea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_cea.c; path = proj/src/PJ_cea.c; sourceTree = "<group>"; };
+		46EB2E00003900 /* PJ_chamb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_chamb.c; path = proj/src/PJ_chamb.c; sourceTree = "<group>"; };
+		46EB2E00003910 /* PJ_collg.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_collg.c; path = proj/src/PJ_collg.c; sourceTree = "<group>"; };
+		46EB2E00003920 /* PJ_crast.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_crast.c; path = proj/src/PJ_crast.c; sourceTree = "<group>"; };
+		46EB2E00003930 /* pj_ctx.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_ctx.c; path = proj/src/pj_ctx.c; sourceTree = "<group>"; };
+		46EB2E00003940 /* pj_datums.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_datums.c; path = proj/src/pj_datums.c; sourceTree = "<group>"; };
+		46EB2E00003950 /* pj_datum_set.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_datum_set.c; path = proj/src/pj_datum_set.c; sourceTree = "<group>"; };
+		46EB2E00003960 /* PJ_denoy.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_denoy.c; path = proj/src/PJ_denoy.c; sourceTree = "<group>"; };
+		46EB2E00003970 /* pj_deriv.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_deriv.c; path = proj/src/pj_deriv.c; sourceTree = "<group>"; };
+		46EB2E00003980 /* PJ_eck1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eck1.c; path = proj/src/PJ_eck1.c; sourceTree = "<group>"; };
+		46EB2E00003990 /* PJ_eck2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eck2.c; path = proj/src/PJ_eck2.c; sourceTree = "<group>"; };
+		46EB2E000039A0 /* PJ_eck3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eck3.c; path = proj/src/PJ_eck3.c; sourceTree = "<group>"; };
+		46EB2E000039B0 /* PJ_eck4.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eck4.c; path = proj/src/PJ_eck4.c; sourceTree = "<group>"; };
+		46EB2E000039C0 /* PJ_eck5.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eck5.c; path = proj/src/PJ_eck5.c; sourceTree = "<group>"; };
+		46EB2E000039D0 /* pj_ellps.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_ellps.c; path = proj/src/pj_ellps.c; sourceTree = "<group>"; };
+		46EB2E000039E0 /* pj_ell_set.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_ell_set.c; path = proj/src/pj_ell_set.c; sourceTree = "<group>"; };
+		46EB2E000039F0 /* PJ_eqc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eqc.c; path = proj/src/PJ_eqc.c; sourceTree = "<group>"; };
+		46EB2E00003A00 /* PJ_eqdc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_eqdc.c; path = proj/src/PJ_eqdc.c; sourceTree = "<group>"; };
+		46EB2E00003A10 /* pj_errno.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_errno.c; path = proj/src/pj_errno.c; sourceTree = "<group>"; };
+		46EB2E00003A20 /* pj_factors.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_factors.c; path = proj/src/pj_factors.c; sourceTree = "<group>"; };
+		46EB2E00003A30 /* PJ_fahey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_fahey.c; path = proj/src/PJ_fahey.c; sourceTree = "<group>"; };
+		46EB2E00003A40 /* PJ_fouc_s.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_fouc_s.c; path = proj/src/PJ_fouc_s.c; sourceTree = "<group>"; };
+		46EB2E00003A50 /* pj_fwd.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_fwd.c; path = proj/src/pj_fwd.c; sourceTree = "<group>"; };
+		46EB2E00003A60 /* PJ_gall.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_gall.c; path = proj/src/PJ_gall.c; sourceTree = "<group>"; };
+		46EB2E00003A70 /* pj_gauss.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_gauss.c; path = proj/src/pj_gauss.c; sourceTree = "<group>"; };
+		46EB2E00003A80 /* pj_geocent.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_geocent.c; path = proj/src/pj_geocent.c; sourceTree = "<group>"; };
+		46EB2E00003A90 /* PJ_geos.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_geos.c; path = proj/src/PJ_geos.c; sourceTree = "<group>"; };
+		46EB2E00003AA0 /* PJ_gins8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_gins8.c; path = proj/src/PJ_gins8.c; sourceTree = "<group>"; };
+		46EB2E00003AB0 /* PJ_gnom.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_gnom.c; path = proj/src/PJ_gnom.c; sourceTree = "<group>"; };
+		46EB2E00003AC0 /* PJ_gn_sinu.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_gn_sinu.c; path = proj/src/PJ_gn_sinu.c; sourceTree = "<group>"; };
+		46EB2E00003AD0 /* PJ_goode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_goode.c; path = proj/src/PJ_goode.c; sourceTree = "<group>"; };
+		46EB2E00003AE0 /* pj_gridinfo.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_gridinfo.c; path = proj/src/pj_gridinfo.c; sourceTree = "<group>"; };
+		46EB2E00003AF0 /* pj_gridlist.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_gridlist.c; path = proj/src/pj_gridlist.c; sourceTree = "<group>"; };
+		46EB2E00003B00 /* PJ_gstmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_gstmerc.c; path = proj/src/PJ_gstmerc.c; sourceTree = "<group>"; };
+		46EB2E00003B10 /* PJ_hammer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_hammer.c; path = proj/src/PJ_hammer.c; sourceTree = "<group>"; };
+		46EB2E00003B20 /* PJ_hatano.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_hatano.c; path = proj/src/PJ_hatano.c; sourceTree = "<group>"; };
+		46EB2E00003B30 /* PJ_healpix.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_healpix.c; path = proj/src/PJ_healpix.c; sourceTree = "<group>"; };
+		46EB2E00003B40 /* PJ_igh.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_igh.c; path = proj/src/PJ_igh.c; sourceTree = "<group>"; };
+		46EB2E00003B50 /* PJ_imw_p.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_imw_p.c; path = proj/src/PJ_imw_p.c; sourceTree = "<group>"; };
+		46EB2E00003B60 /* pj_init.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_init.c; path = proj/src/pj_init.c; sourceTree = "<group>"; };
+		46EB2E00003B70 /* pj_initcache.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_initcache.c; path = proj/src/pj_initcache.c; sourceTree = "<group>"; };
+		46EB2E00003B80 /* pj_inv.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_inv.c; path = proj/src/pj_inv.c; sourceTree = "<group>"; };
+		46EB2E00003B90 /* PJ_isea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_isea.c; path = proj/src/PJ_isea.c; sourceTree = "<group>"; };
+		46EB2E00003BA0 /* PJ_krovak.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_krovak.c; path = proj/src/PJ_krovak.c; sourceTree = "<group>"; };
+		46EB2E00003BB0 /* PJ_labrd.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_labrd.c; path = proj/src/PJ_labrd.c; sourceTree = "<group>"; };
+		46EB2E00003BC0 /* PJ_laea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_laea.c; path = proj/src/PJ_laea.c; sourceTree = "<group>"; };
+		46EB2E00003BD0 /* PJ_lagrng.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_lagrng.c; path = proj/src/PJ_lagrng.c; sourceTree = "<group>"; };
+		46EB2E00003BE0 /* PJ_larr.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_larr.c; path = proj/src/PJ_larr.c; sourceTree = "<group>"; };
+		46EB2E00003BF0 /* PJ_lask.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_lask.c; path = proj/src/PJ_lask.c; sourceTree = "<group>"; };
+		46EB2E00003C00 /* pj_latlong.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_latlong.c; path = proj/src/pj_latlong.c; sourceTree = "<group>"; };
+		46EB2E00003C10 /* PJ_lcc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_lcc.c; path = proj/src/PJ_lcc.c; sourceTree = "<group>"; };
+		46EB2E00003C20 /* PJ_lcca.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_lcca.c; path = proj/src/PJ_lcca.c; sourceTree = "<group>"; };
+		46EB2E00003C30 /* pj_list.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_list.c; path = proj/src/pj_list.c; sourceTree = "<group>"; };
 		46EB2E00003C40 /* pj_list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pj_list.h; path = proj/src/pj_list.h; sourceTree = "<group>"; };
-		46EB2E00003C50 /* pj_log.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_log.c; path = proj/src/pj_log.c; sourceTree = "<group>"; };
-		46EB2E00003C60 /* PJ_loxim.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_loxim.c; path = proj/src/PJ_loxim.c; sourceTree = "<group>"; };
-		46EB2E00003C70 /* PJ_lsat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_lsat.c; path = proj/src/PJ_lsat.c; sourceTree = "<group>"; };
-		46EB2E00003C80 /* pj_malloc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_malloc.c; path = proj/src/pj_malloc.c; sourceTree = "<group>"; };
-		46EB2E00003C90 /* PJ_mbtfpp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_mbtfpp.c; path = proj/src/PJ_mbtfpp.c; sourceTree = "<group>"; };
-		46EB2E00003CA0 /* PJ_mbtfpq.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_mbtfpq.c; path = proj/src/PJ_mbtfpq.c; sourceTree = "<group>"; };
-		46EB2E00003CB0 /* PJ_mbt_fps.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_mbt_fps.c; path = proj/src/PJ_mbt_fps.c; sourceTree = "<group>"; };
-		46EB2E00003CC0 /* PJ_merc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_merc.c; path = proj/src/PJ_merc.c; sourceTree = "<group>"; };
-		46EB2E00003CD0 /* PJ_mill.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_mill.c; path = proj/src/PJ_mill.c; sourceTree = "<group>"; };
-		46EB2E00003CE0 /* pj_mlfn.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_mlfn.c; path = proj/src/pj_mlfn.c; sourceTree = "<group>"; };
-		46EB2E00003CF0 /* PJ_mod_ster.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_mod_ster.c; path = proj/src/PJ_mod_ster.c; sourceTree = "<group>"; };
-		46EB2E00003D00 /* PJ_moll.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_moll.c; path = proj/src/PJ_moll.c; sourceTree = "<group>"; };
-		46EB2E00003D10 /* pj_msfn.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_msfn.c; path = proj/src/pj_msfn.c; sourceTree = "<group>"; };
-		46EB2E00003D20 /* pj_mutex.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_mutex.c; path = proj/src/pj_mutex.c; sourceTree = "<group>"; };
-		46EB2E00003D30 /* PJ_natearth.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_natearth.c; path = proj/src/PJ_natearth.c; sourceTree = "<group>"; };
-		46EB2E00003D40 /* PJ_nell.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_nell.c; path = proj/src/PJ_nell.c; sourceTree = "<group>"; };
-		46EB2E00003D50 /* PJ_nell_h.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_nell_h.c; path = proj/src/PJ_nell_h.c; sourceTree = "<group>"; };
-		46EB2E00003D60 /* PJ_nocol.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_nocol.c; path = proj/src/PJ_nocol.c; sourceTree = "<group>"; };
-		46EB2E00003D70 /* PJ_nsper.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_nsper.c; path = proj/src/PJ_nsper.c; sourceTree = "<group>"; };
-		46EB2E00003D80 /* PJ_nzmg.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_nzmg.c; path = proj/src/PJ_nzmg.c; sourceTree = "<group>"; };
-		46EB2E00003D90 /* PJ_ob_tran.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_ob_tran.c; path = proj/src/PJ_ob_tran.c; sourceTree = "<group>"; };
-		46EB2E00003DA0 /* PJ_ocea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_ocea.c; path = proj/src/PJ_ocea.c; sourceTree = "<group>"; };
-		46EB2E00003DB0 /* PJ_oea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_oea.c; path = proj/src/PJ_oea.c; sourceTree = "<group>"; };
-		46EB2E00003DC0 /* PJ_omerc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_omerc.c; path = proj/src/PJ_omerc.c; sourceTree = "<group>"; };
-		46EB2E00003DD0 /* pj_open_lib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_open_lib.c; path = proj/src/pj_open_lib.c; sourceTree = "<group>"; };
-		46EB2E00003DE0 /* PJ_ortho.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_ortho.c; path = proj/src/PJ_ortho.c; sourceTree = "<group>"; };
-		46EB2E00003DF0 /* pj_param.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_param.c; path = proj/src/pj_param.c; sourceTree = "<group>"; };
-		46EB2E00003E00 /* pj_phi2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_phi2.c; path = proj/src/pj_phi2.c; sourceTree = "<group>"; };
-		46EB2E00003E10 /* PJ_poly.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_poly.c; path = proj/src/PJ_poly.c; sourceTree = "<group>"; };
-		46EB2E00003E20 /* pj_pr_list.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_pr_list.c; path = proj/src/pj_pr_list.c; sourceTree = "<group>"; };
-		46EB2E00003E30 /* PJ_putp2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_putp2.c; path = proj/src/PJ_putp2.c; sourceTree = "<group>"; };
-		46EB2E00003E40 /* PJ_putp3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_putp3.c; path = proj/src/PJ_putp3.c; sourceTree = "<group>"; };
-		46EB2E00003E50 /* PJ_putp4p.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_putp4p.c; path = proj/src/PJ_putp4p.c; sourceTree = "<group>"; };
-		46EB2E00003E60 /* PJ_putp5.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_putp5.c; path = proj/src/PJ_putp5.c; sourceTree = "<group>"; };
-		46EB2E00003E70 /* PJ_putp6.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_putp6.c; path = proj/src/PJ_putp6.c; sourceTree = "<group>"; };
-		46EB2E00003E80 /* pj_qsfn.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_qsfn.c; path = proj/src/pj_qsfn.c; sourceTree = "<group>"; };
-		46EB2E00003E90 /* pj_release.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_release.c; path = proj/src/pj_release.c; sourceTree = "<group>"; };
-		46EB2E00003EA0 /* PJ_robin.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_robin.c; path = proj/src/PJ_robin.c; sourceTree = "<group>"; };
-		46EB2E00003EB0 /* PJ_rpoly.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_rpoly.c; path = proj/src/PJ_rpoly.c; sourceTree = "<group>"; };
-		46EB2E00003EC0 /* PJ_sconics.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_sconics.c; path = proj/src/PJ_sconics.c; sourceTree = "<group>"; };
-		46EB2E00003ED0 /* PJ_somerc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_somerc.c; path = proj/src/PJ_somerc.c; sourceTree = "<group>"; };
-		46EB2E00003EE0 /* PJ_stere.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_stere.c; path = proj/src/PJ_stere.c; sourceTree = "<group>"; };
-		46EB2E00003EF0 /* PJ_sterea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_sterea.c; path = proj/src/PJ_sterea.c; sourceTree = "<group>"; };
-		46EB2E00003F00 /* pj_strerrno.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_strerrno.c; path = proj/src/pj_strerrno.c; sourceTree = "<group>"; };
-		46EB2E00003F10 /* PJ_sts.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_sts.c; path = proj/src/PJ_sts.c; sourceTree = "<group>"; };
-		46EB2E00003F20 /* PJ_tcc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_tcc.c; path = proj/src/PJ_tcc.c; sourceTree = "<group>"; };
-		46EB2E00003F30 /* PJ_tcea.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_tcea.c; path = proj/src/PJ_tcea.c; sourceTree = "<group>"; };
-		46EB2E00003F40 /* PJ_tmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_tmerc.c; path = proj/src/PJ_tmerc.c; sourceTree = "<group>"; };
-		46EB2E00003F50 /* PJ_tpeqd.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_tpeqd.c; path = proj/src/PJ_tpeqd.c; sourceTree = "<group>"; };
-		46EB2E00003F60 /* pj_transform.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_transform.c; path = proj/src/pj_transform.c; sourceTree = "<group>"; };
-		46EB2E00003F70 /* pj_tsfn.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_tsfn.c; path = proj/src/pj_tsfn.c; sourceTree = "<group>"; };
-		46EB2E00003F80 /* pj_units.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_units.c; path = proj/src/pj_units.c; sourceTree = "<group>"; };
-		46EB2E00003F90 /* PJ_urm5.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_urm5.c; path = proj/src/PJ_urm5.c; sourceTree = "<group>"; };
-		46EB2E00003FA0 /* PJ_urmfps.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_urmfps.c; path = proj/src/PJ_urmfps.c; sourceTree = "<group>"; };
-		46EB2E00003FB0 /* pj_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_utils.c; path = proj/src/pj_utils.c; sourceTree = "<group>"; };
-		46EB2E00003FC0 /* PJ_vandg.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_vandg.c; path = proj/src/PJ_vandg.c; sourceTree = "<group>"; };
-		46EB2E00003FD0 /* PJ_vandg2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_vandg2.c; path = proj/src/PJ_vandg2.c; sourceTree = "<group>"; };
-		46EB2E00003FE0 /* PJ_vandg4.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_vandg4.c; path = proj/src/PJ_vandg4.c; sourceTree = "<group>"; };
-		46EB2E00003FF0 /* PJ_wag2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_wag2.c; path = proj/src/PJ_wag2.c; sourceTree = "<group>"; };
-		46EB2E00004000 /* PJ_wag3.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_wag3.c; path = proj/src/PJ_wag3.c; sourceTree = "<group>"; };
-		46EB2E00004010 /* PJ_wag7.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_wag7.c; path = proj/src/PJ_wag7.c; sourceTree = "<group>"; };
-		46EB2E00004020 /* PJ_wink1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_wink1.c; path = proj/src/PJ_wink1.c; sourceTree = "<group>"; };
-		46EB2E00004030 /* PJ_wink2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = PJ_wink2.c; path = proj/src/PJ_wink2.c; sourceTree = "<group>"; };
-		46EB2E00004040 /* pj_zpoly1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pj_zpoly1.c; path = proj/src/pj_zpoly1.c; sourceTree = "<group>"; };
+		46EB2E00003C50 /* pj_log.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_log.c; path = proj/src/pj_log.c; sourceTree = "<group>"; };
+		46EB2E00003C60 /* PJ_loxim.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_loxim.c; path = proj/src/PJ_loxim.c; sourceTree = "<group>"; };
+		46EB2E00003C70 /* PJ_lsat.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_lsat.c; path = proj/src/PJ_lsat.c; sourceTree = "<group>"; };
+		46EB2E00003C80 /* pj_malloc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_malloc.c; path = proj/src/pj_malloc.c; sourceTree = "<group>"; };
+		46EB2E00003C90 /* PJ_mbtfpp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_mbtfpp.c; path = proj/src/PJ_mbtfpp.c; sourceTree = "<group>"; };
+		46EB2E00003CA0 /* PJ_mbtfpq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_mbtfpq.c; path = proj/src/PJ_mbtfpq.c; sourceTree = "<group>"; };
+		46EB2E00003CB0 /* PJ_mbt_fps.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_mbt_fps.c; path = proj/src/PJ_mbt_fps.c; sourceTree = "<group>"; };
+		46EB2E00003CC0 /* PJ_merc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_merc.c; path = proj/src/PJ_merc.c; sourceTree = "<group>"; };
+		46EB2E00003CD0 /* PJ_mill.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_mill.c; path = proj/src/PJ_mill.c; sourceTree = "<group>"; };
+		46EB2E00003CE0 /* pj_mlfn.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_mlfn.c; path = proj/src/pj_mlfn.c; sourceTree = "<group>"; };
+		46EB2E00003CF0 /* PJ_mod_ster.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_mod_ster.c; path = proj/src/PJ_mod_ster.c; sourceTree = "<group>"; };
+		46EB2E00003D00 /* PJ_moll.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_moll.c; path = proj/src/PJ_moll.c; sourceTree = "<group>"; };
+		46EB2E00003D10 /* pj_msfn.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_msfn.c; path = proj/src/pj_msfn.c; sourceTree = "<group>"; };
+		46EB2E00003D20 /* pj_mutex.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_mutex.c; path = proj/src/pj_mutex.c; sourceTree = "<group>"; };
+		46EB2E00003D30 /* PJ_natearth.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_natearth.c; path = proj/src/PJ_natearth.c; sourceTree = "<group>"; };
+		46EB2E00003D40 /* PJ_nell.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_nell.c; path = proj/src/PJ_nell.c; sourceTree = "<group>"; };
+		46EB2E00003D50 /* PJ_nell_h.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_nell_h.c; path = proj/src/PJ_nell_h.c; sourceTree = "<group>"; };
+		46EB2E00003D60 /* PJ_nocol.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_nocol.c; path = proj/src/PJ_nocol.c; sourceTree = "<group>"; };
+		46EB2E00003D70 /* PJ_nsper.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_nsper.c; path = proj/src/PJ_nsper.c; sourceTree = "<group>"; };
+		46EB2E00003D80 /* PJ_nzmg.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_nzmg.c; path = proj/src/PJ_nzmg.c; sourceTree = "<group>"; };
+		46EB2E00003D90 /* PJ_ob_tran.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_ob_tran.c; path = proj/src/PJ_ob_tran.c; sourceTree = "<group>"; };
+		46EB2E00003DA0 /* PJ_ocea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_ocea.c; path = proj/src/PJ_ocea.c; sourceTree = "<group>"; };
+		46EB2E00003DB0 /* PJ_oea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_oea.c; path = proj/src/PJ_oea.c; sourceTree = "<group>"; };
+		46EB2E00003DC0 /* PJ_omerc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_omerc.c; path = proj/src/PJ_omerc.c; sourceTree = "<group>"; };
+		46EB2E00003DD0 /* pj_open_lib.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_open_lib.c; path = proj/src/pj_open_lib.c; sourceTree = "<group>"; };
+		46EB2E00003DE0 /* PJ_ortho.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_ortho.c; path = proj/src/PJ_ortho.c; sourceTree = "<group>"; };
+		46EB2E00003DF0 /* pj_param.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_param.c; path = proj/src/pj_param.c; sourceTree = "<group>"; };
+		46EB2E00003E00 /* pj_phi2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_phi2.c; path = proj/src/pj_phi2.c; sourceTree = "<group>"; };
+		46EB2E00003E10 /* PJ_poly.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_poly.c; path = proj/src/PJ_poly.c; sourceTree = "<group>"; };
+		46EB2E00003E20 /* pj_pr_list.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_pr_list.c; path = proj/src/pj_pr_list.c; sourceTree = "<group>"; };
+		46EB2E00003E30 /* PJ_putp2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_putp2.c; path = proj/src/PJ_putp2.c; sourceTree = "<group>"; };
+		46EB2E00003E40 /* PJ_putp3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_putp3.c; path = proj/src/PJ_putp3.c; sourceTree = "<group>"; };
+		46EB2E00003E50 /* PJ_putp4p.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_putp4p.c; path = proj/src/PJ_putp4p.c; sourceTree = "<group>"; };
+		46EB2E00003E60 /* PJ_putp5.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_putp5.c; path = proj/src/PJ_putp5.c; sourceTree = "<group>"; };
+		46EB2E00003E70 /* PJ_putp6.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_putp6.c; path = proj/src/PJ_putp6.c; sourceTree = "<group>"; };
+		46EB2E00003E80 /* pj_qsfn.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_qsfn.c; path = proj/src/pj_qsfn.c; sourceTree = "<group>"; };
+		46EB2E00003E90 /* pj_release.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_release.c; path = proj/src/pj_release.c; sourceTree = "<group>"; };
+		46EB2E00003EA0 /* PJ_robin.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_robin.c; path = proj/src/PJ_robin.c; sourceTree = "<group>"; };
+		46EB2E00003EB0 /* PJ_rpoly.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_rpoly.c; path = proj/src/PJ_rpoly.c; sourceTree = "<group>"; };
+		46EB2E00003EC0 /* PJ_sconics.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_sconics.c; path = proj/src/PJ_sconics.c; sourceTree = "<group>"; };
+		46EB2E00003ED0 /* PJ_somerc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_somerc.c; path = proj/src/PJ_somerc.c; sourceTree = "<group>"; };
+		46EB2E00003EE0 /* PJ_stere.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_stere.c; path = proj/src/PJ_stere.c; sourceTree = "<group>"; };
+		46EB2E00003EF0 /* PJ_sterea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_sterea.c; path = proj/src/PJ_sterea.c; sourceTree = "<group>"; };
+		46EB2E00003F00 /* pj_strerrno.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_strerrno.c; path = proj/src/pj_strerrno.c; sourceTree = "<group>"; };
+		46EB2E00003F10 /* PJ_sts.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_sts.c; path = proj/src/PJ_sts.c; sourceTree = "<group>"; };
+		46EB2E00003F20 /* PJ_tcc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_tcc.c; path = proj/src/PJ_tcc.c; sourceTree = "<group>"; };
+		46EB2E00003F30 /* PJ_tcea.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_tcea.c; path = proj/src/PJ_tcea.c; sourceTree = "<group>"; };
+		46EB2E00003F40 /* PJ_tmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_tmerc.c; path = proj/src/PJ_tmerc.c; sourceTree = "<group>"; };
+		46EB2E00003F50 /* PJ_tpeqd.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_tpeqd.c; path = proj/src/PJ_tpeqd.c; sourceTree = "<group>"; };
+		46EB2E00003F60 /* pj_transform.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_transform.c; path = proj/src/pj_transform.c; sourceTree = "<group>"; };
+		46EB2E00003F70 /* pj_tsfn.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_tsfn.c; path = proj/src/pj_tsfn.c; sourceTree = "<group>"; };
+		46EB2E00003F80 /* pj_units.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_units.c; path = proj/src/pj_units.c; sourceTree = "<group>"; };
+		46EB2E00003F90 /* PJ_urm5.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_urm5.c; path = proj/src/PJ_urm5.c; sourceTree = "<group>"; };
+		46EB2E00003FA0 /* PJ_urmfps.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_urmfps.c; path = proj/src/PJ_urmfps.c; sourceTree = "<group>"; };
+		46EB2E00003FB0 /* pj_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_utils.c; path = proj/src/pj_utils.c; sourceTree = "<group>"; };
+		46EB2E00003FC0 /* PJ_vandg.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_vandg.c; path = proj/src/PJ_vandg.c; sourceTree = "<group>"; };
+		46EB2E00003FD0 /* PJ_vandg2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_vandg2.c; path = proj/src/PJ_vandg2.c; sourceTree = "<group>"; };
+		46EB2E00003FE0 /* PJ_vandg4.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_vandg4.c; path = proj/src/PJ_vandg4.c; sourceTree = "<group>"; };
+		46EB2E00003FF0 /* PJ_wag2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_wag2.c; path = proj/src/PJ_wag2.c; sourceTree = "<group>"; };
+		46EB2E00004000 /* PJ_wag3.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_wag3.c; path = proj/src/PJ_wag3.c; sourceTree = "<group>"; };
+		46EB2E00004010 /* PJ_wag7.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_wag7.c; path = proj/src/PJ_wag7.c; sourceTree = "<group>"; };
+		46EB2E00004020 /* PJ_wink1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_wink1.c; path = proj/src/PJ_wink1.c; sourceTree = "<group>"; };
+		46EB2E00004030 /* PJ_wink2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = PJ_wink2.c; path = proj/src/PJ_wink2.c; sourceTree = "<group>"; };
+		46EB2E00004040 /* pj_zpoly1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pj_zpoly1.c; path = proj/src/pj_zpoly1.c; sourceTree = "<group>"; };
 		46EB2E00004050 /* projects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = projects.h; path = proj/src/projects.h; sourceTree = "<group>"; };
 		46EB2E00004060 /* proj_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = proj_api.h; path = proj/src/proj_api.h; sourceTree = "<group>"; };
 		46EB2E00004070 /* proj_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = proj_config.h; path = proj/src/proj_config.h; sourceTree = "<group>"; };
-		46EB2E00004080 /* proj_etmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = proj_etmerc.c; path = proj/src/proj_etmerc.c; sourceTree = "<group>"; };
-		46EB2E00004090 /* proj_mdist.c */ = {isa = PBXFileReference; includeInIndex = 1; name = proj_mdist.c; path = proj/src/proj_mdist.c; sourceTree = "<group>"; };
-		46EB2E000040A0 /* proj_rouss.c */ = {isa = PBXFileReference; includeInIndex = 1; name = proj_rouss.c; path = proj/src/proj_rouss.c; sourceTree = "<group>"; };
-		46EB2E000040B0 /* p_series.c */ = {isa = PBXFileReference; includeInIndex = 1; name = p_series.c; path = proj/src/p_series.c; sourceTree = "<group>"; };
-		46EB2E000040C0 /* rtodms.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rtodms.c; path = proj/src/rtodms.c; sourceTree = "<group>"; };
-		46EB2E000040D0 /* vector1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vector1.c; path = proj/src/vector1.c; sourceTree = "<group>"; };
+		46EB2E00004080 /* proj_etmerc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = proj_etmerc.c; path = proj/src/proj_etmerc.c; sourceTree = "<group>"; };
+		46EB2E00004090 /* proj_mdist.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = proj_mdist.c; path = proj/src/proj_mdist.c; sourceTree = "<group>"; };
+		46EB2E000040A0 /* proj_rouss.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = proj_rouss.c; path = proj/src/proj_rouss.c; sourceTree = "<group>"; };
+		46EB2E000040B0 /* p_series.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = p_series.c; path = proj/src/p_series.c; sourceTree = "<group>"; };
+		46EB2E000040C0 /* rtodms.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = rtodms.c; path = proj/src/rtodms.c; sourceTree = "<group>"; };
+		46EB2E000040D0 /* vector1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = vector1.c; path = proj/src/vector1.c; sourceTree = "<group>"; };
 		46EB2E00004180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		46EB2E00004260 /* FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.debug.xcconfig; sourceTree = "<group>"; };
 		46EB2E00004270 /* FMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.release.xcconfig; sourceTree = "<group>"; };
@@ -2326,12 +2325,14 @@
 		46EB2E00008DB0 /* libjson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libjson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EB2E00008DF0 /* KissXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KissXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EB2E00008E30 /* proj4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = proj4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47E145BA702861D67F7EF7BD2F67FC6C /* KissXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KissXML.framework; path = KissXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53A730F4F4248E7E3F38F8409A2DE97C /* SMCalloutView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SMCalloutView.framework; path = SMCalloutView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMDB.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA5C7B29260D948D439ED4F31E86FA4 /* proj4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = proj4.framework; path = proj4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3939CB326590B2A8FA6118806248F8C /* libjson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = libjson.framework; path = libjson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAD3D49B1F14DFBC8564C0A1D87C3171 /* Pods_HelloWhirly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HelloWhirly.framework; path = "Pods-HelloWhirly.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E145BA702861D67F7EF7BD2F67FC6C /* KissXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KissXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A730F4F4248E7E3F38F8409A2DE97C /* SMCalloutView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMCalloutView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4E537D25BA585B000F364E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		9B4E539A25BB42AB000F364E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA5C7B29260D948D439ED4F31E86FA4 /* proj4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = proj4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3939CB326590B2A8FA6118806248F8C /* libjson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libjson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD3D49B1F14DFBC8564C0A1D87C3171 /* Pods_HelloWhirly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWhirly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2372,11 +2373,10 @@
 				46EB2E00008DC0 /* libjson.framework in Frameworks */,
 				46EB2E00008AC0 /* MetalKit.framework in Frameworks */,
 				46EB2E00008AE0 /* MetalPerformanceShaders.framework in Frameworks */,
-				46EB2E00008A00 /* MobileCoreServices.framework in Frameworks */,
-				46EB2E00008A80 /* OpenGLES.framework in Frameworks */,
 				46EB2E00008E40 /* proj4.framework in Frameworks */,
 				46EB2E00008D40 /* SMCalloutView.framework in Frameworks */,
 				46EB2E00008A20 /* SystemConfiguration.framework in Frameworks */,
+				9B4E537E25BA585B000F364E /* CoreServices.framework in Frameworks */,
 				46EB2E00008A60 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2436,6 +2436,8 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B4E539A25BB42AB000F364E /* OpenGLES.framework */,
+				9B4E537D25BA585B000F364E /* CoreServices.framework */,
 				46EB2E00008D70 /* FMDB.framework */,
 				46EB2E00008DF0 /* KissXML.framework */,
 				46EB2E00008DB0 /* libjson.framework */,
@@ -2473,7 +2475,6 @@
 				46EB2E00000120 /* standard */,
 				46EB2E00004250 /* Support Files */,
 			);
-			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
@@ -2484,7 +2485,6 @@
 				46EB2E00000210 /* Core */,
 				46EB2E00004460 /* Support Files */,
 			);
-			name = KissXML;
 			path = KissXML;
 			sourceTree = "<group>";
 		};
@@ -2497,7 +2497,6 @@
 				46EB2E00000300 /* SMClassicCalloutView.m */,
 				46EB2E000045E0 /* Support Files */,
 			);
-			name = SMCalloutView;
 			path = SMCalloutView;
 			sourceTree = "<group>";
 		};
@@ -2509,7 +2508,6 @@
 				46EB2E00000310 /* MaplyComponent */,
 				46EB2E000077F0 /* Support Files */,
 			);
-			name = WhirlyGlobe;
 			path = WhirlyGlobe;
 			sourceTree = "<group>";
 		};
@@ -2558,7 +2556,6 @@
 				46EB2E00003510 /* Visual_C.h */,
 				46EB2E00007DA0 /* Support Files */,
 			);
-			name = libjson;
 			path = libjson;
 			sourceTree = "<group>";
 		};
@@ -2732,7 +2729,6 @@
 				46EB2E000040D0 /* vector1.c */,
 				46EB2E00008930 /* Support Files */,
 			);
-			name = proj4;
 			path = proj4;
 			sourceTree = "<group>";
 		};
@@ -4369,7 +4365,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1230;
 			};
 			buildConfigurationList = 46EB2E00000030 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -5282,7 +5278,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FMDB/FMDB-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5317,7 +5313,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FMDB/FMDB-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5351,7 +5347,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KissXML/KissXML-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5386,7 +5382,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KissXML/KissXML-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5420,7 +5416,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SMCalloutView/SMCalloutView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SMCalloutView/SMCalloutView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5455,7 +5451,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SMCalloutView/SMCalloutView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SMCalloutView/SMCalloutView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5489,7 +5485,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/WhirlyGlobe/WhirlyGlobe-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WhirlyGlobe/WhirlyGlobe-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5524,7 +5520,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/WhirlyGlobe/WhirlyGlobe-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WhirlyGlobe/WhirlyGlobe-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5558,7 +5554,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/libjson/libjson-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/libjson/libjson-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5593,7 +5589,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/libjson/libjson-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/libjson/libjson-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5627,7 +5623,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/proj4/proj4-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/proj4/proj4-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5662,7 +5658,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/proj4/proj4-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/proj4/proj4-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,8 +13,7 @@
 		27B3A12925B9FE650036A2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12725B9FE650036A2CD /* Main.storyboard */; };
 		27B3A12B25B9FE680036A2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12A25B9FE680036A2CD /* Assets.xcassets */; };
 		27B3A12E25B9FE680036A2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A12C25B9FE680036A2CD /* LaunchScreen.storyboard */; };
-		27B3A14425BA00630036A2CD /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */; };
-		636E91EE815F107371FECFB7 /* Pods_HelloWhirly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */; };
+		9B4E539525BA5A0B000F364E /* Pods_HelloWhirly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		27B3A12D25B9FE680036A2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B3A12F25B9FE680036A2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B3A13E25B9FFFD0036A2CD /* HelloWhirly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWhirly-Bridging-Header.h"; sourceTree = "<group>"; };
-		27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "geography-class_medres.mbtiles"; sourceTree = "<group>"; };
 		535A1555F0B21CA6EA8C0908 /* Pods_HelloWhirly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWhirly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A785FC5DB5325217B9CF8DCB /* Pods-HelloWhirly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWhirly.release.xcconfig"; path = "Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly.release.xcconfig"; sourceTree = "<group>"; };
 		B54283668CFEC7C6390B1A6F /* Pods-HelloWhirly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWhirly.debug.xcconfig"; path = "Target Support Files/Pods-HelloWhirly/Pods-HelloWhirly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -38,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				636E91EE815F107371FECFB7 /* Pods_HelloWhirly.framework in Frameworks */,
+				9B4E539525BA5A0B000F364E /* Pods_HelloWhirly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +64,6 @@
 		27B3A12025B9FE650036A2CD /* HelloWhirly */ = {
 			isa = PBXGroup;
 			children = (
-				27B3A14325BA00630036A2CD /* geography-class_medres.mbtiles */,
 				27B3A12125B9FE650036A2CD /* AppDelegate.swift */,
 				27B3A12325B9FE650036A2CD /* SceneDelegate.swift */,
 				27B3A12525B9FE650036A2CD /* ViewController.swift */,
@@ -156,7 +153,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B3A14425BA00630036A2CD /* geography-class_medres.mbtiles in Resources */,
 				27B3A12E25B9FE680036A2CD /* LaunchScreen.storyboard in Resources */,
 				27B3A12B25B9FE680036A2CD /* Assets.xcassets in Resources */,
 				27B3A12925B9FE650036A2CD /* Main.storyboard in Resources */,
@@ -364,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X77323HE95;
 				INFOPLIST_FILE = HelloWhirly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X77323HE95;
 				INFOPLIST_FILE = HelloWhirly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '14.0'
 install! 'cocoapods', :deterministic_uuids => false
 project 'HelloWhirly.xcodeproj'
 inhibit_all_warnings!

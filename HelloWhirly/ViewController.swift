@@ -8,26 +8,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let DoGlobe = false
-    
-    var theViewC: MaplyBaseViewController?
-    var globeViewC: WhirlyGlobeViewController?
-    var mapViewC: MaplyViewController?
+    private var theViewC: MaplyBaseViewController? = nil
+    private var mapViewC: MaplyViewController? = nil
+    private var imageLoader: MaplyQuadImageLoader? = nil
+    private var tileInfo: MaplyRemoteTileFetcher? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("creating view controller(s)")
-        // Start with either globe or map
-        if DoGlobe {
-            print("starting as globe")
-            let globeViewC = WhirlyGlobeViewController()
-            theViewC = globeViewC
-        } else {
-            print("starting as slippy")
-            let mapViewC = MaplyViewController()
-            theViewC = mapViewC
-        }
+        print("creating view controller")
+        let mapViewC = MaplyViewController()
+        theViewC = mapViewC
 
         // Wire this into the view hierarchy
         print("wiring up view controllers")
@@ -35,53 +26,38 @@ class ViewController: UIViewController {
         theViewC!.view.frame = self.view.bounds
         addChild(theViewC!)
         
-        // we want a black background for a globe, a white background for a map.
-        theViewC!.clearColor = (globeViewC != nil) ? UIColor.green : UIColor.purple
+        // set the background
+        theViewC!.clearColor = UIColor.green
 
         // and 30 frames per second
         theViewC!.frameInterval = 2
 
-        // Set up an MBTiles file and read the header
-        guard let mbTilesFetcher = MaplyMBTileFetcher(mbTiles: "geography-class_medres")
-        else {
-            print("Can't load mbtiles?!")
-            return
-        }
+        // Where do we get the tiles and were do we cache them?
+        let cacheDir = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
+        let thisCacheDir = "\(cacheDir)/stamentiles/"
+        let maxZoom = Int32(16)
+        let tileInfo = MaplyRemoteTileInfoNew(baseURL: "https://stamen-tiles-a.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png",
+                                              minZoom: Int32(0),
+                                              maxZoom: Int32(maxZoom))
+        tileInfo.cacheDir = thisCacheDir
 
-        print("setting up sample params")
         // Sampling parameters define how we break down the globe
         let sampleParams = MaplySamplingParams()
-        sampleParams.coordSys = mbTilesFetcher.coordSys()
+        sampleParams.coordSys = MaplySphericalMercator(webStandard: ())
         sampleParams.coverPoles = true
         sampleParams.edgeMatching = true
-        sampleParams.minZoom = mbTilesFetcher.minZoom()
-        sampleParams.maxZoom = mbTilesFetcher.maxZoom()
+        sampleParams.minZoom = tileInfo.minZoom
+        sampleParams.maxZoom = tileInfo.maxZoom
         sampleParams.singleLevel = true
 
         // The Image Loader does the actual work
-        print("setting up image loader")
-        guard let imageLoader = MaplyQuadImageLoader(params: sampleParams,
-            tileInfo: mbTilesFetcher.tileInfo(),
-            viewC: theViewC!)
-        else {
-            print("failed to configure image loader")
-            return
-        }
-        imageLoader.setTileFetcher(mbTilesFetcher)
-        imageLoader.baseDrawPriority = kMaplyImageLayerDrawPriorityDefault
-
+        let imageLoader = MaplyQuadImageLoader(params: sampleParams, tileInfo: tileInfo, viewC: theViewC!)
+        imageLoader!.baseDrawPriority = kMaplyImageLayerDrawPriorityDefault
+          
+        
         print("starting up")
-        // start up over Madrid, center of the old-world
-        if let globeViewC = globeViewC {
-            globeViewC.height = 0.8
-            globeViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704, 40.5023),
-            time: 1.0)
-        }
-        else if let mapViewC = mapViewC {
-            mapViewC.height = 1.0
-            mapViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704, 40.5023),
-            time: 1.0)
-        }
+        mapViewC.height = 1.0
+        mapViewC.animate(toPosition: MaplyCoordinateMakeWithDegrees(-3.6704, 40.5023), time: 1.0)
     }
 
 
